@@ -6,8 +6,8 @@ import TradesTable from '@/components/TradesTable';
 
 const Logs: NextPage = () => {
   const { trades } = useEchoStore();
-  const [selectedTradeId, setSelectedTradeId] = useState<string | null>(
-    trades.length > 0 ? trades[0].id : null
+  const [selectedTradeId, setSelectedTradeId] = useState<string | undefined>(
+    trades.length > 0 ? trades[0].id : undefined
   );
   
   return (

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import { useEchoStore } from '@/store/echo';
-import { motion } from 'framer-motion';
-import { durations, standardEasing } from '@/utils/motion';
-import Layout from '@/components/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+import { durations, standardEasing, staggerChildren } from '@/utils/motion';
+import { LayoutShell, useDrawer } from '@/components/LayoutShell';
 import SignalCard from '@/components/SignalCard';
+import Button from '@/components/Button';
+import TradesTable from '@/components/TradesTable';
 import Toast, { ToastType } from '@/components/Toast';
 
 interface ToastState {
@@ -17,10 +19,39 @@ interface ToastState {
   };
 }
 
+/**
+ * Redesigned Signals page with masonry grid layout and drawer details panel
+ * Combines Signals + Logs for better context retention
+ */
 const Signals: NextPage = () => {
-  const { signals, mirror, settings } = useEchoStore();
+  const { signals, trades, mirror, settings, loadSignals } = useEchoStore();
   const [toast, setToast] = useState<ToastState>({ visible: false, message: '', type: 'info' });
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedSignal, setSelectedSignal] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<'overview' | 'backtest' | 'trades'>('overview');
+  const { openDrawer, closeDrawer } = useDrawer();
+  
+  // Load signals on initial render
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      await loadSignals();
+      setIsLoading(false);
+    };
+    
+    fetchData();
+  }, [loadSignals]);
+  
+  // Filter chips for signals
+  const filterOptions = [
+    { id: 'all', label: 'All' },
+    { id: 'ai', label: 'AI' },
+    { id: 'stable', label: 'Stable' },
+    { id: 'highSharpe', label: 'High Sharpe' },
+    { id: 'favourite', label: 'Favourites' }
+  ];
+  
+  const [activeFilter, setActiveFilter] = useState('all');
   
   // Handle mirroring a signal
   const handleMirror = async (id: string) => {
@@ -28,7 +59,7 @@ const Signals: NextPage = () => {
       setIsLoading(true);
       setToast({
         visible: true,
-        message: 'Submitting transaction...',
+        message: 'Signal locked, profit potential engaged...',
         type: 'info'
       });
       
@@ -37,20 +68,19 @@ const Signals: NextPage = () => {
       // Show success toast
       setToast({
         visible: true,
-        message: `Transaction confirmed`,
-        type: 'success',
-        action: {
-          label: 'View in Logs',
-          onClick: () => window.location.href = '/logs'
-        }
+        message: `Trade confirmed 🚀`,
+        type: 'success'
       });
+      
+      // Close the drawer if open
+      closeDrawer();
     } catch (error) {
       console.error('Error mirroring trade:', error);
       
       // Show error toast
       setToast({
         visible: true,
-        message: `Error: ${(error as Error).message || 'Failed to mirror trade'}`,
+        message: `Glitch detected. Oracle disliked that input.`,
         type: 'error'
       });
     } finally {
@@ -58,73 +88,283 @@ const Signals: NextPage = () => {
     }
   };
   
-  // Filter signals based on whitelist
-  const filteredSignals = settings.whitelist.length > 0
-    ? signals.filter(signal => settings.whitelist.includes(signal.caller))
-    : signals;
-
-  return (
-    <Layout title="Signals">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <motion.h2 
-            className="text-xl font-medium text-white"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: durations.medium,
-              ease: standardEasing
-            }}
+  // Handle showing signal details in drawer
+  const handleShowDetails = (signalId: string) => {
+    setSelectedSignal(signalId);
+    const signal = signals.find(s => s.id === signalId);
+    
+    if (!signal) return;
+    
+    // Find trades related to this signal
+    const relatedTrades = trades.filter(t => t.signalId === signalId);
+    
+    // Open drawer with signal details
+    openDrawer(
+      <div className="space-y-6">
+        {/* Drawer Tabs */}
+        <div className="flex border-b border-white/10 -mx-4 px-4">
+          <button
+            className={`py-3 px-4 text-sm font-medium ${activeTab === 'overview' ? 'text-primary border-b-2 border-primary' : 'text-white/60 hover:text-white/80'}`}
+            onClick={() => setActiveTab('overview')}
           >
-            Live Signal Feed
-          </motion.h2>
-          
-          <div className="text-sm text-white/60">
-            {settings.whitelist.length > 0 ? (
-              <span>Filtered by {settings.whitelist.join(', ')}</span>
-            ) : (
-              <span>Showing all signals</span>
-            )}
-          </div>
+            Overview
+          </button>
+          <button
+            className={`py-3 px-4 text-sm font-medium ${activeTab === 'backtest' ? 'text-primary border-b-2 border-primary' : 'text-white/60 hover:text-white/80'}`}
+            onClick={() => setActiveTab('backtest')}
+          >
+            Back-test
+          </button>
+          <button
+            className={`py-3 px-4 text-sm font-medium ${activeTab === 'trades' ? 'text-primary border-b-2 border-primary' : 'text-white/60 hover:text-white/80'}`}
+            onClick={() => setActiveTab('trades')}
+          >
+            Trade Log
+          </button>
         </div>
         
-        {isLoading ? (
-          <div className="space-y-4">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-[100px] w-full skeleton rounded-card"></div>
-            ))}
-          </div>
-        ) : filteredSignals.length === 0 ? (
-          <div className="glassmorphic p-8 rounded-card text-center">
-            <p className="text-white/40">
-              {signals.length === 0 
-                ? 'No signals available yet. Please wait for incoming signals.' 
-                : 'No signals match your filter criteria. Adjust filters in the sidebar.'}
-            </p>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {filteredSignals.map((signal, index) => (
-              <motion.div
-                key={signal.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: durations.medium,
-                  ease: standardEasing,
-                  delay: 0.05 * Math.min(index, 5) // Stagger up to 5 items
-                }}
-              >
-                <SignalCard 
-                  signal={signal}
-                  onMirror={handleMirror}
-                  isPaused={settings.isPaused}
-                />
-              </motion.div>
-            ))}
-          </div>
-        )}
+        {/* Tab Content */}
+        <AnimatePresence mode="wait">
+          {activeTab === 'overview' && (
+            <motion.div
+              key="overview"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-6"
+            >
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+                  <span className="text-lg font-mono font-medium text-primary">${signal.token[0]}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-display tracking-tight text-white">
+                    ${signal.token}
+                  </h3>
+                  <p className="text-sm font-body text-white/60">{signal.caller}</p>
+                </div>
+              </div>
+              
+              <div className="glassmorphic p-4">
+                <h4 className="text-sm text-white/70 mb-2 font-medium">Signal Confidence</h4>
+                <div className="flex items-center space-x-2">
+                  <div className="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div 
+                      className={`h-full ${signal.confidence >= 70 ? 'bg-success' : signal.confidence >= 50 ? 'bg-warning' : 'bg-error'}`}
+                      style={{ width: `${signal.confidence}%` }}
+                    />
+                  </div>
+                  <span className={`text-sm font-mono font-medium ${signal.confidence >= 70 ? 'text-success' : signal.confidence >= 50 ? 'text-warning' : 'text-error'}`}>
+                    {signal.confidence}%
+                  </span>
+                </div>
+              </div>
+              
+              <div className="glassmorphic p-4">
+                <h4 className="text-sm text-white/70 mb-2 font-medium">Rationale</h4>
+                <div className="prose prose-invert text-sm max-w-none">
+                  {signal.rationaleMd.split('\n').map((line, i) => (
+                    <p key={i} className="mb-2">{line}</p>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex justify-center">
+                <Button
+                  variant="gradient"
+                  size="md"
+                  onClick={() => handleMirror(signal.id)}
+                  disabled={settings.isPaused}
+                  fullWidth
+                  withSound
+                >
+                  Mirror Trade
+                </Button>
+              </div>
+            </motion.div>
+          )}
+          
+          {activeTab === 'backtest' && (
+            <motion.div
+              key="backtest"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-6"
+            >
+              <div className="neo-card p-4">
+                <h4 className="text-sm text-white/70 mb-4 font-medium">Back-test Performance</h4>
+                
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="glassmorphic p-3">
+                    <div className="text-xs text-white/50 mb-1">Sharpe Ratio</div>
+                    <div className="text-lg font-mono font-bold text-primary">1.87</div>
+                  </div>
+                  <div className="glassmorphic p-3">
+                    <div className="text-xs text-white/50 mb-1">Win Rate</div>
+                    <div className="text-lg font-mono font-bold text-success">68%</div>
+                  </div>
+                  <div className="glassmorphic p-3">
+                    <div className="text-xs text-white/50 mb-1">Avg Return</div>
+                    <div className="text-lg font-mono font-bold text-white">+3.2%</div>
+                  </div>
+                  <div className="glassmorphic p-3">
+                    <div className="text-xs text-white/50 mb-1">Max Drawdown</div>
+                    <div className="text-lg font-mono font-bold text-error">-12.4%</div>
+                  </div>
+                </div>
+                
+                <div className="h-40 flex items-center justify-center bg-white/5 rounded-lg">
+                  <p className="text-sm text-white/40">Historical performance chart</p>
+                </div>
+              </div>
+              
+              <div className="flex justify-center">
+                <Button
+                  variant="gradient"
+                  size="md"
+                  onClick={() => handleMirror(signal.id)}
+                  disabled={settings.isPaused}
+                  fullWidth
+                  withSound
+                >
+                  Mirror Trade
+                </Button>
+              </div>
+            </motion.div>
+          )}
+          
+          {activeTab === 'trades' && (
+            <motion.div
+              key="trades"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-6"
+            >
+              <div className="neo-card p-4">
+                <h4 className="text-sm text-white/70 mb-4 font-medium">Trade History</h4>
+                
+                {relatedTrades.length > 0 ? (
+                  <TradesTable trades={relatedTrades} />
+                ) : (
+                  <div className="glassmorphic p-4 text-center">
+                    <p className="text-sm text-white/40">No signals yet—spin up your first AI strategy.</p>
+                  </div>
+                )}
+              </div>
+              
+              <div className="flex justify-center">
+                <Button
+                  variant="gradient"
+                  size="md"
+                  onClick={() => handleMirror(signal.id)}
+                  disabled={settings.isPaused}
+                  fullWidth
+                  withSound
+                >
+                  Mirror Trade
+                </Button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+    );
+  };
+  
+  // Filter signals based on whitelist and active filter
+  const filteredSignals = React.useMemo(() => {
+    let filteredSignals = settings.whitelist.length > 0
+      ? signals.filter(signal => settings.whitelist.includes(signal.caller))
+      : [...signals];
+    
+    // Apply additional filter if not on 'all'
+    if (activeFilter !== 'all') {
+      // This is a demo, so we'll just filter randomly based on the filter
+      if (activeFilter === 'ai') {
+        filteredSignals = filteredSignals.filter(s => s.caller.includes('AI') || Math.random() > 0.5);
+      } else if (activeFilter === 'stable') {
+        filteredSignals = filteredSignals.filter(s => s.token === 'ETH' || s.token === 'BTC' || s.token === 'USDC');
+      } else if (activeFilter === 'highSharpe') {
+        filteredSignals = filteredSignals.filter(s => s.confidence > 65);
+      } else if (activeFilter === 'favourite') {
+        filteredSignals = filteredSignals.filter(s => Math.random() > 0.7); // Random selection for demo
+      }
+    }
+    
+    return filteredSignals;
+  }, [signals, settings.whitelist, activeFilter]);
+
+  return (
+    <LayoutShell title="Signals">
+      {/* Filter chips */}
+      <div className="mb-6 flex flex-wrap gap-2">
+        {filterOptions.map(filter => (
+          <button
+            key={filter.id}
+            onClick={() => setActiveFilter(filter.id)}
+            className={`
+              px-3 py-1.5 rounded-full text-sm transition-all duration-fast
+              ${activeFilter === filter.id 
+                ? 'bg-primary/20 text-primary shadow-glow' 
+                : 'bg-panel text-white/60 hover:text-white/80'}
+            `}
+          >
+            {filter.label}
+          </button>
+        ))}
+      </div>
+      
+      {isLoading ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="h-[140px] w-full skeleton rounded-card"></div>
+          ))}
+        </div>
+      ) : filteredSignals.length === 0 ? (
+        <div className="glassmorphic p-8 rounded-card text-center">
+          <p className="empty-state">
+            {signals.length === 0 
+              ? 'No signals yet—spin up your first AI strategy.' 
+              : 'No signals match your filter criteria. Try another filter.'}
+          </p>
+        </div>
+      ) : (
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          variants={staggerChildren(0.05)}
+          initial="hidden"
+          animate="visible"
+        >
+          {filteredSignals.map((signal, index) => (
+            <motion.div
+              key={signal.id}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: {
+                    duration: durations.medium,
+                    ease: standardEasing
+                  }
+                }
+              }}
+            >
+              <SignalCard 
+                signal={signal}
+                onMirror={handleMirror}
+                isPaused={settings.isPaused}
+                showDetails={() => handleShowDetails(signal.id)}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
       
       {/* Toast */}
       {toast.visible && (
@@ -135,7 +375,7 @@ const Signals: NextPage = () => {
           action={toast.action}
         />
       )}
-    </Layout>
+    </LayoutShell>
   );
 };
 

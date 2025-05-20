@@ -1,5 +1,5 @@
-import create from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
 
 // Types from our schema
 export type Signal = {
@@ -60,7 +60,7 @@ export interface EchoState {
   updatePnL: (delta: number) => void;
 }
 
-export const useEchoStore = create<EchoState>(
+export const useEchoStore = create<EchoState>()(
   persist(
     (set, get) => ({
       // Initial state
@@ -81,7 +81,22 @@ export const useEchoStore = create<EchoState>(
       },
       
       mirror: async (signalId) => {
+        if (!signalId) {
+          throw new Error('Signal ID is required to mirror a trade');
+        }
+        
         try {
+          // Check wallet connection first
+          const state = get();
+          if (!state.wallet.connected) {
+            throw new Error('Wallet not connected. Please connect your wallet to mirror trades.');
+          }
+          
+          // Check if trading is paused
+          if (state.settings.isPaused) {
+            throw new Error('Trading is currently paused. Please resume trading to mirror signals.');
+          }
+          
           // Call the GraphQL endpoint
           const response = await fetch('/api/mock/graphql', {
             method: 'POST',
@@ -107,10 +122,21 @@ export const useEchoStore = create<EchoState>(
             })
           });
           
+          // Handle network errors
+          if (!response.ok) {
+            throw new Error(`Network error: ${response.status} ${response.statusText}`);
+          }
+          
           const result = await response.json();
           
+          // Handle GraphQL errors
           if (result.errors) {
-            throw new Error(result.errors[0].message);
+            throw new Error(result.errors[0].message || 'Unknown GraphQL error occurred');
+          }
+          
+          // Check if data and mirrorTrade exist
+          if (!result.data || !result.data.mirrorTrade) {
+            throw new Error('Invalid response format from server');
           }
           
           const newTrade = result.data.mirrorTrade;
@@ -123,7 +149,8 @@ export const useEchoStore = create<EchoState>(
           return newTrade;
         } catch (error) {
           console.error('Error mirroring trade:', error);
-          throw error;
+          // Rethrow with a more user-friendly message if needed
+          throw error instanceof Error ? error : new Error('Failed to mirror trade due to an unexpected error');
         }
       },
       
@@ -339,10 +366,14 @@ export const useEchoStore = create<EchoState>(
     }),
     {
       name: 'echo-storage',
-      getStorage: () => localStorage,
-      partialize: (state) => ({
-        settings: state.settings  // Only persist settings
-      })
+      storage: createJSONStorage(() => 
+        typeof window !== 'undefined' ? localStorage : {
+          getItem: () => null,
+          setItem: () => {},
+          removeItem: () => {}
+        }
+      ),
+      partialize: (state) => ({ settings: state.settings })
     }
   )
 );

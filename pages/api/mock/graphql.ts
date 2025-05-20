@@ -26,7 +26,7 @@ let signalInterval: NodeJS.Timeout | null = null;
 let portfolioInterval: NodeJS.Timeout | null = null;
 
 // Start the "real-time" updates when in mock mode
-if (process.env.NODE_ENV === 'mock' || process.env.NEXT_PUBLIC_DEMO_MODE === 'true') {
+if (process.env.NODE_ENV === 'mock' as any || process.env.NEXT_PUBLIC_DEMO_MODE === 'true') {
   signalInterval = setInterval(() => {
     const newSignal = nextSignal();
     if (newSignal) {

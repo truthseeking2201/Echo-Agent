@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import type { NextPage } from 'next';
 import { useEchoStore } from '@/store/echo';
 import Layout from '@/components/Layout';
@@ -7,17 +7,12 @@ import VaRGauge from '@/components/VaRGauge';
 import PortfolioChart from '@/components/PortfolioChart';
 import TradesTable from '@/components/TradesTable';
 import Button from '@/components/Button';
-import Toast, { ToastType } from '@/components/Toast';
-
-interface ToastState {
-  visible: boolean;
-  message: string;
-  type: ToastType;
-}
+import Toast from '@/components/Toast';
+import useAutoTrade from '@/utils/useAutoTrade';
 
 const Dashboard: NextPage = () => {
-  const { portfolio, trades, settings, connectWallet, mirror, wallet } = useEchoStore();
-  const [toast, setToast] = useState<ToastState>({ visible: false, message: '', type: 'info' });
+  const { portfolio, trades, settings, connectWallet, wallet } = useEchoStore();
+  const { toast, handleAutoTrade, closeToast } = useAutoTrade();
   
   // Connect wallet automatically when page loads
   useEffect(() => {
@@ -51,53 +46,6 @@ const Dashboard: NextPage = () => {
     return latest - closestPoint.v;
   };
   
-  // Auto-trade functionality
-  const handleAutoTrade = async () => {
-    if (!wallet.connected) {
-      connectWallet();
-      return;
-    }
-    
-    // If no signals yet, show a toast
-    if (useEchoStore.getState().signals.length === 0) {
-      setToast({
-        visible: true,
-        message: 'Waiting for signals...',
-        type: 'info'
-      });
-      return;
-    }
-    
-    // Take the first signal and mirror it
-    const signal = useEchoStore.getState().signals[0];
-    
-    try {
-      setToast({
-        visible: true,
-        message: `Submitting trade for $${signal.token}...`,
-        type: 'info'
-      });
-      
-      const trade = await mirror(signal.id);
-      
-      // Show success toast
-      setToast({
-        visible: true,
-        message: `Tx ${trade.txHash.substring(0, 6)}...${trade.txHash.substring(trade.txHash.length - 4)} confirmed`,
-        type: 'success'
-      });
-    } catch (error) {
-      console.error('Error mirroring trade:', error);
-      
-      // Show error toast
-      setToast({
-        visible: true,
-        message: `Error: ${(error as Error).message || 'Failed to mirror trade'}`,
-        type: 'error'
-      });
-    }
-  };
-  
   return (
     <Layout title="Dashboard">
       {/* KPI Row */}
@@ -126,7 +74,7 @@ const Dashboard: NextPage = () => {
           </div>
           <div className="mt-4 flex justify-center">
             <Button 
-              variant="primary"
+              variant="solid"
               onClick={handleAutoTrade}
               disabled={settings.isPaused}
             >
@@ -155,7 +103,7 @@ const Dashboard: NextPage = () => {
         <Toast
           msg={toast.message}
           type={toast.type}
-          onClose={() => setToast({ ...toast, visible: false })}
+          onClose={closeToast}
         />
       )}
     </Layout>
