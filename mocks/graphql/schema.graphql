@@ -1,0 +1,50 @@
+type Signal {
+  id: ID!
+  token: String!
+  caller: String!
+  confidence: Int!
+  createdAt: String!
+  rationaleMd: String!
+}
+
+type Trade {
+  id: ID!
+  token: String!
+  side: String!
+  qty: Float!
+  price: Float!
+  pnlPercent: Float!
+  txHash: String!
+  signalId: ID!
+  ts: String!
+  status: String!
+}
+
+type PnLPoint {
+  t: String!
+  v: Float!
+}
+
+type Settings {
+  maxRiskPct: Int!
+  whitelist: [String!]!
+  isPaused: Boolean!
+}
+
+input SettingsInput {
+  maxRiskPct: Int
+  whitelist: [String!]
+  isPaused: Boolean
+}
+
+type Query {
+  signals(limit: Int, offset: Int): [Signal!]!
+  trades(limit: Int, offset: Int): [Trade!]!
+  portfolio: [PnLPoint!]!
+  settings: Settings!
+}
+
+type Mutation {
+  mirrorTrade(signalId: ID!): Trade!
+  setSettings(input: SettingsInput!): Settings!
+}

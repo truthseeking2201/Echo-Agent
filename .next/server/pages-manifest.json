@@ -1,0 +1,9 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/settings": "pages/settings.js",
+  "/simulate": "pages/simulate.js",
+  "/api/mock/graphql": "pages/api/mock/graphql.js",
+  "/logs": "pages/logs.js"
+}
