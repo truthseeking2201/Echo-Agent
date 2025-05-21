@@ -1,17 +1,18 @@
 import { Variants } from 'framer-motion';
 
-// Duration tokens (matching CSS custom properties)
+// Duration tokens based on UI revamp specs
 export const durations = {
-  fast: 0.09, // 90ms
-  medium: 0.2, // 200ms
-  slow: 0.26, // 260ms
-  lazy: 0.6, // 600ms
+  fast: 0.14, // 140ms - t-fast for hover/press
+  medium: 0.32, // 320ms - t-medium for card hover
+  route: 0.45, // 450ms - t-route for page change
+  lazy: 0.8, // 800ms - for longer animations
 };
 
-// Standard easing
-export const standardEasing = [0.4, 0, 0.2, 1];
+// Easing curves from UI revamp
+export const standardEasing = [0.4, 0, 0.2, 1]; // curve-standard
+export const springEasing = [0.43, 0.13, 0.23, 0.96]; // curve-spring
 
-// Reusable variants for animations
+// Reusable variants for animations based on UI revamp specs
 export const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: { 
@@ -56,19 +57,19 @@ export const fadeInUp: Variants = {
 export const scaleIn: Variants = {
   hidden: { 
     opacity: 0, 
-    scale: 0.95 
+    scale: 0.96 
   },
   visible: { 
     opacity: 1, 
     scale: 1,
     transition: {
       duration: durations.medium,
-      ease: standardEasing,
+      ease: springEasing,
     }
   },
   exit: { 
     opacity: 0,
-    scale: 0.95,
+    scale: 0.96,
     transition: {
       duration: durations.fast,
       ease: standardEasing,
@@ -86,7 +87,7 @@ export const slideInRight: Variants = {
     x: 0,
     transition: {
       duration: durations.medium,
-      ease: standardEasing,
+      ease: springEasing,
     }
   },
   exit: { 
@@ -109,7 +110,7 @@ export const slideInLeft: Variants = {
     x: 0,
     transition: {
       duration: durations.medium,
-      ease: standardEasing,
+      ease: springEasing,
     }
   },
   exit: { 
@@ -132,7 +133,7 @@ export const slideInUp: Variants = {
     y: 0,
     transition: {
       duration: durations.medium,
-      ease: standardEasing,
+      ease: springEasing,
     }
   },
   exit: { 
@@ -145,15 +146,39 @@ export const slideInUp: Variants = {
   }
 };
 
-export const slideInBottom: Variants = {
+// Modal animations based on the UI revamp specifications
+export const modalDesktop: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.96,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.35, // 350ms
+      ease: springEasing,
+    }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.96,
+    transition: {
+      duration: durations.fast,
+      ease: standardEasing,
+    }
+  }
+};
+
+export const modalMobile: Variants = {
   hidden: {
     y: '100%',
   },
   visible: {
     y: 0,
     transition: {
-      duration: durations.slow,
-      ease: standardEasing,
+      duration: 0.4, // 400ms
+      ease: springEasing,
     }
   },
   exit: {
@@ -176,15 +201,22 @@ export const staggerChildren = (delay = 0.05) => ({
   }
 });
 
-// Card hover effect
+// Card hover effect according to UI revamp specs
 export const cardHover = {
   rest: { 
     y: 0,
-    boxShadow: '0 4px 20px rgba(59, 130, 246, 0.15)',
+    boxShadow: '0 4px 24px rgba(0, 0, 0, 0.24)',
   },
   hover: { 
-    y: -2,
-    boxShadow: '0 8px 32px rgba(59, 130, 246, 0.25)',
+    y: -4,
+    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.24)',
+    transition: {
+      duration: durations.medium,
+      ease: springEasing,
+    }
+  },
+  focusWithin: {
+    boxShadow: '0 0 12px var(--tw-gradient-stops)',
     transition: {
       duration: durations.fast,
       ease: standardEasing,
@@ -192,7 +224,8 @@ export const cardHover = {
   },
   tap: {
     y: 0,
-    boxShadow: '0 2px 10px rgba(59, 130, 246, 0.15)',
+    scale: 0.99,
+    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)',
     transition: {
       duration: durations.fast,
       ease: standardEasing,

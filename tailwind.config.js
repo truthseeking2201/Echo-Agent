@@ -7,19 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Core colors
+        // Core colors as defined in the UI revamp spec
         bg: { 
-          900: '#070709', // Deep-space black, eye-friendly
-          800: '#0C0C10' // Slightly lighter for layering
+          900: '#050507', // Canvas - primary
+          800: '#0D0F12'  // Canvas - alt
         },
-        panel: 'rgba(255,255,255,0.06)', // Frosted glass panels
-        primary: '#00E5EE', // CTAs & key links
-        accent: '#FF6D9C', // Hover glow, hot tags
-        gradientAI: { 
-          100: '#0090FF',
-          200: '#FF6D9C',
-          300: '#FB7E16' 
-        },
+        surface: 'rgba(255,255,255,0.06)', // Surface / Panel with backdrop-filter
+        primary: '#00E5EE', // Action / Brand
+        'accent-pink': '#FF6D9C', // Accent A 
+        'accent-orange': '#FB7E16', // Accent B
+        'accent': '#FF6D9C', // Legacy accent color for compatibility
         // Enhanced AI color palette
         ai: {
           blue: '#0090FF',
@@ -34,51 +31,58 @@ module.exports = {
         error: '#F87878',
       },
       backgroundImage: {
-        // AI Gradient for button borders, progress bars
-        'ai-gradient': 'linear-gradient(90deg,#FFF -4%,#0090FF 22%,#FF6D9C 48%,#FB7E16 74%,#FFF 100%)',
+        // Gradient AI as defined in the UI revamp spec
+        'gradient-ai': 'linear-gradient(90deg,#00E5EE,#A855F7,#FF6D9C,#FB7E16)',
         'ai-vibrant': 'linear-gradient(90deg,#00E5EE,#A855F7,#FF6D9C)',
         'ai-shimmer': 'linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)',
         // Particle effects
         'matrix-sparkle': 'radial-gradient(circle at center, rgba(0,229,238,0.15) 0%, rgba(0,0,0,0) 70%)',
       },
       boxShadow: {
-        neon: '0 0 12px var(--c-primary)',
-        'neon-accent': '0 0 12px var(--c-accent)',
+        soft: '0 2px 4px 6px rgba(0,0,0,.24)', // shadow-soft
+        neon: '0 0 12px var(--tw-gradient-stops)', // shadow-neon
+        'neon-accent': '0 0 12px var(--c-accent-pink)',
         glass: '0 8px 32px rgba(0, 0, 0, 0.2)',
         'card-hover': '0 8px 32px rgba(0, 0, 0, 0.3)',
         'ai-glow': '0 0 20px rgba(0, 229, 238, 0.4)',
       },
       fontFamily: {
-        // Typography (Google Fonts)
-        display: ['"Sora"', 'sans-serif'],
-        body: ['"Work Sans"', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        // Typography as defined in the UI revamp spec
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"DM Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {
         'card': '16px',
         'button': '12px',
       },
-      // Motion & Interaction
+      // Motion & Interaction tokens from the UI revamp spec
       transitionDuration: {
-        'fast': '140ms', // Button hover
-        'medium': '400ms', // Skeleton loading
-        'slow': '600ms', // Page transitions
+        'fast': '0.14s', // t-fast from spec
+        'medium': '0.32s', // t-medium from spec
+        'route': '0.45s', // t-route from spec
       },
       transitionTimingFunction: {
-        'standard': 'cubic-bezier(0.4, 0, 0.2, 1)',
-        'spring': 'cubic-bezier(0.43, 0.13, 0.23, 0.96)', // Spring effect for page transitions
+        'standard': 'cubic-bezier(0.4, 0, 0.2, 1)', // curve-standard
+        'spring': 'cubic-bezier(0.43, 0.13, 0.23, 0.96)', // curve-spring
       },
-      // Layout & Composition - 8px atomic grid with "fractured" columns
+      // Layout & Composition - 8pt base grid with breakpoints as defined in the spec
       gridTemplateColumns: {
         'overview': '1fr',
         'signals': 'repeat(auto-fit, minmax(300px, 1fr))',
         'desktop-nav': '64px 1fr',
+        // Bento layout breakpoints
+        'bento-lg': 'repeat(12, 1fr)', // ≥ 1536px
+        'bento-md': 'repeat(8, 1fr)',  // 768-1535px
+        'bento-sm': 'repeat(4, 1fr)',  // ≤ 767px
       },
       spacing: {
-        'grid-gap': '24px', // Base grid gap
+        'grid-gap': '24px', // Base grid gap for large screens
+        'grid-gap-md': '16px', // Medium screens
+        'grid-gap-sm': '12px', // Small screens
       },
       animation: {
-        'skeleton': 'shimmer 1.5s ease-in-out infinite',
+        'ai-shimmer': 'shimmer 1.5s ease-in-out infinite', // ai-shimmer animation
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
         'gradient-ring': 'gradient-ring 3s linear infinite',
         'gradient-flow': 'gradient-flow 3s linear infinite',
@@ -87,8 +91,8 @@ module.exports = {
       },
       keyframes: {
         shimmer: {
-          '0%': { backgroundPosition: '200% 0' },
-          '100%': { backgroundPosition: '-200% 0' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         'pulse-glow': {
           '0%, 100%': { boxShadow: '0 0 0 rgba(0, 229, 238, 0)' },
@@ -113,14 +117,19 @@ module.exports = {
         },
       },
       fontSize: {
-        'display': 'clamp(2.4rem, 4vw, 4rem)',
+        // Typography from UI revamp spec
+        'display': ['48px', '56px'], // Display - 48/56
+        'heading': ['32px', '40px'], // Heading - 32/40
+        'subhead': ['24px', '32px'], // Sub-head - 24/32
+        'body': ['16px', '24px'],    // Body - 16/24
+        'caption': ['14px', '20px'],  // Caption - 14/20
+        'code': ['14px', '20px'],     // Code/Data - 14/20
       },
-      lineHeight: {
-        'display': '1.1',
-        'body': '1.6',
+      letterSpacing: {
+        'display': '-0.01em', // -1% on headings
       },
       backdropBlur: {
-        'glass': '12px',
+        'glass': '8px', // As defined in the UI revamp spec
       },
     },
   },

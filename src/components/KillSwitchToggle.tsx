@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { durations, standardEasing } from '@/utils/motion';
+import { durations } from '@/utils/motion';
 
 interface KillSwitchToggleProps {
   isPaused: boolean;
@@ -9,7 +9,12 @@ interface KillSwitchToggleProps {
 }
 
 /**
- * A toggle switch for pausing/resuming trading
+ * Enhanced toggle switch with advanced animation effects based on the UI revamp spec
+ * Used for enabling/disabling the Echo-Agent auto-trading feature
+ * 
+ * Off: Track bg-800; thumb grey 500
+ * On: Track gradient-ai 40% opacity + glow; thumb white; slow breathing glow (2s)
+ * 
  * @example
  * <KillSwitchToggle 
  *   isPaused={false} 
@@ -22,10 +27,12 @@ export const KillSwitchToggle: React.FC<KillSwitchToggleProps> = ({
   onToggle,
   label
 }) => {
+  const isActive = !isPaused;
+  
   return (
     <div className="flex items-center space-x-3">
       {label && (
-        <span className="text-sm font-medium text-white/80">
+        <span className="text-caption font-medium text-white/80">
           {label}
         </span>
       )}
@@ -33,33 +40,64 @@ export const KillSwitchToggle: React.FC<KillSwitchToggleProps> = ({
       <button
         type="button"
         role="switch"
-        aria-checked={!isPaused}
+        aria-checked={isActive}
         onClick={onToggle}
         className={`
-          relative inline-flex h-5 w-9 items-center rounded-full
-          transition-colors duration-slow
-          ${isPaused ? 'bg-white/20' : 'bg-success'}
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-opacity-50
+          relative inline-flex h-7 w-14 items-center rounded-full p-1
+          transition-colors duration-route
+          ${isActive ? 'bg-black' : 'bg-bg-800'}
+          focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-pink focus-visible:ring-opacity-75
         `}
       >
         <span className="sr-only">{isPaused ? "Resume trading" : "Pause trading"}</span>
         
+        {/* Track Glow - visible when toggle is ON */}
+        {isActive && (
+          <div className="absolute inset-0 rounded-full overflow-hidden">
+            <div className="absolute inset-0 opacity-40 bg-gradient-ai animate-pulse-glow"></div>
+          </div>
+        )}
+        
+        {/* Track Border */}
+        <div className={`
+          absolute inset-0 rounded-full 
+          ${isActive ? 'border border-primary' : 'border border-gray-700'}
+        `}></div>
+        
+        {/* Thumb with slow breathing glow when active */}
         <motion.span
           className={`
-            inline-block h-4 w-4 transform rounded-full 
-            bg-white shadow-md
+            inline-block h-5 w-5 transform rounded-full shadow-md
+            ${isActive ? 'bg-white' : 'bg-gray-500'}
+            relative z-10
           `}
           initial={false}
           animate={{
-            x: isPaused ? 4 : 16
+            x: isActive ? 21 : 0
           }}
           transition={{
             type: "spring",
             stiffness: 240,
-            damping: 30,
-            duration: durations.slow
+            damping: 30
           }}
-        />
+        >
+          {/* Breathing glow effect for active state */}
+          {isActive && (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ 
+                opacity: [0.5, 0.8, 0.5], 
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                repeatType: "mirror" 
+              }}
+              className="absolute inset-0 rounded-full bg-primary blur-[2px] transform origin-center"
+            />
+          )}
+        </motion.span>
       </button>
       
       {isPaused && (

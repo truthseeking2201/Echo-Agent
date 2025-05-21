@@ -7,6 +7,9 @@ import { useEchoStore } from '@/store/echo';
 import { AnimatePresence } from 'framer-motion';
 import { DrawerProvider } from '@/components/LayoutShell';
 
+// We can't use next/font because this project uses NextJS 12
+// Instead, we'll use traditional font imports in globals.css
+
 // Create an Apollo client for the mock GraphQL server
 const client = new ApolloClient({
   uri: '/api/mock/graphql',
