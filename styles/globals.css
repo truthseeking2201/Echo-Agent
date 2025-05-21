@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color system from Brand Essence & Core Inspiration */
+  --c-bg-900: #070709; /* Deep-space black, eye-friendly */
+  --c-panel: rgba(255, 255, 255, 0.06); /* Frosted layers */
+  --c-primary: #00E5EE; /* CTAs & key links */
+  --c-accent: #FF6D9C; /* Hover glow, hot tags */
+  --c-success: #22E570; /* +10% saturation to pop over dark canvas */
+  --c-warning: #FADC15; /* +10% saturation to pop over dark canvas */
+  --c-error: #F87878; /* +10% saturation to pop over dark canvas */
+  
+  /* Gradients */
+  --g-ai: linear-gradient(90deg, #FFF -4%, #0090FF 22%, #FF6D9C 48%, #FB7E16 74%, #FFF 100%);
+  
+  /* Spacing (8px atomic grid) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  
+  /* Border radius */
+  --radius-card: 16px;
+  --radius-button: 12px;
+  
+  /* Grid */
+  --grid-gap: 24px;
+  
+  /* Motion tokens */
+  --t-fast: 140ms; /* Button hover */
+  --t-medium: 400ms; /* Skeleton loading */
+  --t-slow: 600ms; /* Page transition */
+  
+  /* Easing */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.43, 0.13, 0.23, 0.96);
+
+  /* Energy level (for theme intensity) */
+  --energy-level: 1;
+  
+  /* Max width for content */
+  --max-width: 1280px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Work Sans Variable', sans-serif;
+  background-color: var(--c-bg-900);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Typography - Headings ≥ 48 px, letter-spacing −2 % */
+h1, .h1, h2, .h2 {
+  font-family: 'Sora Variable', sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.1;
+}
+
+h2, .h2 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* Numerals / Code font */
+.mono, .numeric {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Three-layer depth system */
+/* Layer 1: Base - WebGL/video noise */
+.base-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  pointer-events: none;
+  opacity: 0.05;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 229, 238, 0.03) 1px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 229, 238, 0.03) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  /* Matrix-style particles */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 20% 30%, rgba(0, 229, 238, 0.1) 1px, transparent 1px),
+                      radial-gradient(circle at 80% 10%, rgba(255, 109, 156, 0.1) 1px, transparent 1px),
+                      radial-gradient(circle at 40% 70%, rgba(255, 109, 156, 0.05) 1px, transparent 1px),
+                      radial-gradient(circle at 60% 50%, rgba(0, 229, 238, 0.05) 1px, transparent 1px);
+    background-size: 300px 300px, 200px 200px, 150px 150px, 250px 250px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+    animation: matrix-particles 15s linear infinite;
+  }
+}
+
+/* Layer 2: Middle - glass cards */
+.neo-card {
+  background-color: var(--c-panel);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--t-fast) var(--ease-standard);
+}
+
+/* Gradient ring on the card */
+.neo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  padding: 1px;
+  background: var(--g-ai);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.7;
+  transition: opacity var(--t-fast) var(--ease-standard);
+}
+
+/* Hover effect for cards */
+.neo-card:hover {
+  transform: translateY(-2px) perspective(1000px) rotateX(2deg);
+}
+
+.neo-card:hover::before {
+  opacity: 1;
+}
+
+/* Layer 3: Top - neon outlines, particles, tooltips */
+.neon-outline {
+  position: relative;
+  z-index: 1;
+}
+
+.neon-outline::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--c-primary);
+  opacity: 0.5;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+/* Button styles with gradient ring animation */
+.btn {
+  position: relative;
+  padding: 8px 16px;
+  border-radius: var(--radius-button);
+  font-weight: 500;
+  transition: transform var(--t-fast) var(--ease-standard),
+              box-shadow var(--t-fast) var(--ease-standard),
+              background-color var(--t-fast) var(--ease-standard);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary {
+  background-color: var(--c-primary);
+  color: var(--c-bg-900);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 12px rgba(0, 229, 238, calc(0.3 * var(--energy-level)));
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-gradient {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-button);
+  padding: 2px;
+  background: var(--g-ai);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background-size: 400% 100%;
+  animation: gradient-ring 3s linear infinite;
+  z-index: -1;
+}
+
+.btn-gradient:hover::before {
+  animation-duration: 1s;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--c-primary);
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 229, 238, 0.1);
+}
+
+/* Glassmorphic styles - frosted layers */
+.glassmorphic {
+  background: var(--c-panel);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform var(--t-fast) var(--ease-standard),
+              box-shadow var(--t-fast) var(--ease-standard);
+}
+
+.glassmorphic:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading skeletons - using AI gradient at 40% opacity */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Gradient ring animation - gradient races around edge */
+@keyframes gradient-ring {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 400% 0%;
+  }
+}
+
+/* Shadow glow animations */
+.shadow-glow {
+  box-shadow: 0 0 12px rgba(0, 229, 238, calc(0.2 * var(--energy-level)));
+  transition: box-shadow var(--t-medium) var(--ease-standard);
+}
+
+.shadow-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 229, 238, calc(0.4 * var(--energy-level)));
+}
+
+/* Particle effects */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: var(--c-primary);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Drawer animation */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: rgba(7, 7, 9, 0.95);
+  backdrop-filter: blur(8px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 50;
+  transform: translateX(100%);
+  transition: transform var(--t-slow) var(--ease-spring);
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--c-primary);
+  border-radius: 4px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Range slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  background: linear-gradient(to right, var(--c-primary), var(--c-accent));
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid var(--c-bg-900);
+  box-shadow: 0 0 6px var(--c-primary);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid var(--c-bg-900);
+  box-shadow: 0 0 6px var(--c-primary);
+}
+
+/* Toast success animation - pop to 105% then settle */
+.toast-success {
+  animation: toast-pop 200ms ease-out forwards;
+}
+
+@keyframes toast-pop {
+  0% { transform: scale(0.95); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Float animation for UI elements */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Parallax tilt for cards - subtle 3D presence */
+.parallax-tilt {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 200ms ease-out;
+}
+
+/* Transitions for motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-property: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Markdown Styles */
+.prose h1 {
+  font-size: 20px;
+  font-family: 'Sora Variable', sans-serif;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.02em;
+}
+
+.prose h2, .prose h3 {
+  font-size: 18px;
+  font-family: 'Sora Variable', sans-serif;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.02em;
+}
+
+.prose p {
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.prose li {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.prose strong {
+  color: var(--c-primary);
+  font-weight: 600;
+}
+
+.prose pre {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  overflow-x: auto;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--c-primary);
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 16px;
+  }
+  
+  h1, .h1 {
+    font-size: 32px;
+  }
+  
+  h2, .h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .drawer {
+    width: 100%;
+  }
+}
+
+/* Utility classes */
+.gradient-text {
+  background: var(--g-ai);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.max-w-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Micro-copy tone classes */
+.empty-state {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.error-message {
+  font-size: 0.875rem;
+  color: var(--c-error);
+}
+
+.success-message {
+  font-size: 0.875rem;
+  color: var(--c-success);
+}
+
+/* Grid mask for animation reveal */
+.grid-reveal-mask {
+  mask-image: linear-gradient(to right, 
+    rgba(0,0,0,0) 0%, 
+    rgba(0,0,0,1) 10%, 
+    rgba(0,0,0,1) 90%, 
+    rgba(0,0,0,0) 100%
+  );
+}

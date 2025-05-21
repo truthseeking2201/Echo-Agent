@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "sig_0000",
+    "token": "ETH",
+    "caller": "@AlphaHunter",
+    "confidence": 51,
+    "createdAt": "2025-05-20T10:25:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0001",
+    "token": "UNI",
+    "caller": "@AlphaHunter",
+    "confidence": 91,
+    "createdAt": "2025-05-20T10:32:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0002",
+    "token": "LINK",
+    "caller": "@SmartDeFi",
+    "confidence": 55,
+    "createdAt": "2025-05-20T10:39:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0003",
+    "token": "DOGE",
+    "caller": "@DefiMaster",
+    "confidence": 67,
+    "createdAt": "2025-05-20T10:46:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0004",
+    "token": "BTC",
+    "caller": "@AlphaHunter",
+    "confidence": 80,
+    "createdAt": "2025-05-20T10:53:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0005",
+    "token": "BNB",
+    "caller": "@BlockExpert",
+    "confidence": 52,
+    "createdAt": "2025-05-20T11:00:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0006",
+    "token": "AAVE",
+    "caller": "@SmartDeFi",
+    "confidence": 88,
+    "createdAt": "2025-05-20T11:07:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0007",
+    "token": "BNB",
+    "caller": "@TokenSage",
+    "confidence": 68,
+    "createdAt": "2025-05-20T11:14:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0008",
+    "token": "SHIB",
+    "caller": "@TokenVision",
+    "confidence": 53,
+    "createdAt": "2025-05-20T11:21:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0009",
+    "token": "XRP",
+    "caller": "@TokenSage",
+    "confidence": 54,
+    "createdAt": "2025-05-20T11:28:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0010",
+    "token": "AAVE",
+    "caller": "@SmartDeFi",
+    "confidence": 62,
+    "createdAt": "2025-05-20T11:35:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0011",
+    "token": "DOT",
+    "caller": "@CryptoWizard",
+    "confidence": 52,
+    "createdAt": "2025-05-20T11:42:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0012",
+    "token": "PEPE",
+    "caller": "@DefiMaster",
+    "confidence": 56,
+    "createdAt": "2025-05-20T11:49:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0013",
+    "token": "PEPE",
+    "caller": "@DefiMaster",
+    "confidence": 68,
+    "createdAt": "2025-05-20T11:56:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0014",
+    "token": "AAVE",
+    "caller": "@OnChainAnalyst",
+    "confidence": 72,
+    "createdAt": "2025-05-20T12:03:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0015",
+    "token": "DOT",
+    "caller": "@TokenVision",
+    "confidence": 71,
+    "createdAt": "2025-05-20T12:10:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0016",
+    "token": "XRP",
+    "caller": "@BlockExpert",
+    "confidence": 43,
+    "createdAt": "2025-05-20T12:17:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0017",
+    "token": "ADA",
+    "caller": "@BlockExpert",
+    "confidence": 78,
+    "createdAt": "2025-05-20T12:24:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0018",
+    "token": "SHIB",
+    "caller": "@CryptoWizard",
+    "confidence": 76,
+    "createdAt": "2025-05-20T12:31:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0019",
+    "token": "LINK",
+    "caller": "@ChainGuru",
+    "confidence": 51,
+    "createdAt": "2025-05-20T12:38:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0020",
+    "token": "LINK",
+    "caller": "@ChainGuru",
+    "confidence": 57,
+    "createdAt": "2025-05-20T12:45:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0021",
+    "token": "XRP",
+    "caller": "@TokenSage",
+    "confidence": 53,
+    "createdAt": "2025-05-20T12:52:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0022",
+    "token": "BTC",
+    "caller": "@CryptoWizard",
+    "confidence": 46,
+    "createdAt": "2025-05-20T12:59:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0023",
+    "token": "BTC",
+    "caller": "@CryptoWizard",
+    "confidence": 81,
+    "createdAt": "2025-05-20T13:06:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0024",
+    "token": "UNI",
+    "caller": "@SmartDeFi",
+    "confidence": 85,
+    "createdAt": "2025-05-20T13:13:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0025",
+    "token": "MATIC",
+    "caller": "@AlphaHunter",
+    "confidence": 45,
+    "createdAt": "2025-05-20T13:20:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0026",
+    "token": "DOT",
+    "caller": "@DefiMaster",
+    "confidence": 41,
+    "createdAt": "2025-05-20T13:27:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0027",
+    "token": "LINK",
+    "caller": "@TokenVision",
+    "confidence": 59,
+    "createdAt": "2025-05-20T13:34:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0028",
+    "token": "BTC",
+    "caller": "@AlphaHunter",
+    "confidence": 58,
+    "createdAt": "2025-05-20T13:41:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0029",
+    "token": "AVAX",
+    "caller": "@CryptoWizard",
+    "confidence": 54,
+    "createdAt": "2025-05-20T13:48:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0030",
+    "token": "ADA",
+    "caller": "@TokenSage",
+    "confidence": 74,
+    "createdAt": "2025-05-20T13:55:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0031",
+    "token": "UNI",
+    "caller": "@TokenSage",
+    "confidence": 52,
+    "createdAt": "2025-05-20T14:02:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0032",
+    "token": "UNI",
+    "caller": "@AlphaHunter",
+    "confidence": 62,
+    "createdAt": "2025-05-20T14:09:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0033",
+    "token": "AAVE",
+    "caller": "@CryptoWizard",
+    "confidence": 53,
+    "createdAt": "2025-05-20T14:16:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0034",
+    "token": "SHIB",
+    "caller": "@TechTrader",
+    "confidence": 92,
+    "createdAt": "2025-05-20T14:23:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0035",
+    "token": "MATIC",
+    "caller": "@TokenSage",
+    "confidence": 46,
+    "createdAt": "2025-05-20T14:30:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0036",
+    "token": "SHIB",
+    "caller": "@BlockExpert",
+    "confidence": 63,
+    "createdAt": "2025-05-20T14:37:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0037",
+    "token": "LINK",
+    "caller": "@BlockExpert",
+    "confidence": 68,
+    "createdAt": "2025-05-20T14:44:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0038",
+    "token": "AVAX",
+    "caller": "@TokenSage",
+    "confidence": 61,
+    "createdAt": "2025-05-20T14:51:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0039",
+    "token": "SOL",
+    "caller": "@SmartDeFi",
+    "confidence": 62,
+    "createdAt": "2025-05-20T14:58:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0040",
+    "token": "SHIB",
+    "caller": "@OnChainAnalyst",
+    "confidence": 82,
+    "createdAt": "2025-05-20T15:05:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0041",
+    "token": "BTC",
+    "caller": "@ChainGuru",
+    "confidence": 55,
+    "createdAt": "2025-05-20T15:12:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0042",
+    "token": "BNB",
+    "caller": "@DefiMaster",
+    "confidence": 59,
+    "createdAt": "2025-05-20T15:19:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0043",
+    "token": "ETH",
+    "caller": "@BlockExpert",
+    "confidence": 43,
+    "createdAt": "2025-05-20T15:26:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0044",
+    "token": "BTC",
+    "caller": "@CryptoWizard",
+    "confidence": 75,
+    "createdAt": "2025-05-20T15:33:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0045",
+    "token": "ETH",
+    "caller": "@OnChainAnalyst",
+    "confidence": 67,
+    "createdAt": "2025-05-20T15:40:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0046",
+    "token": "AVAX",
+    "caller": "@SmartDeFi",
+    "confidence": 71,
+    "createdAt": "2025-05-20T15:47:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0047",
+    "token": "DOT",
+    "caller": "@TokenSage",
+    "confidence": 52,
+    "createdAt": "2025-05-20T15:54:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0048",
+    "token": "BNB",
+    "caller": "@TokenSage",
+    "confidence": 65,
+    "createdAt": "2025-05-20T16:01:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0049",
+    "token": "ETH",
+    "caller": "@OnChainAnalyst",
+    "confidence": 53,
+    "createdAt": "2025-05-20T16:08:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0050",
+    "token": "BTC",
+    "caller": "@ChainGuru",
+    "confidence": 38,
+    "createdAt": "2025-05-20T16:15:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0051",
+    "token": "ETH",
+    "caller": "@ChainGuru",
+    "confidence": 73,
+    "createdAt": "2025-05-20T16:22:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0052",
+    "token": "PEPE",
+    "caller": "@DefiMaster",
+    "confidence": 51,
+    "createdAt": "2025-05-20T16:29:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0053",
+    "token": "SHIB",
+    "caller": "@CryptoWizard",
+    "confidence": 57,
+    "createdAt": "2025-05-20T16:36:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0054",
+    "token": "PEPE",
+    "caller": "@AlphaHunter",
+    "confidence": 38,
+    "createdAt": "2025-05-20T16:43:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0055",
+    "token": "DOGE",
+    "caller": "@CryptoWizard",
+    "confidence": 49,
+    "createdAt": "2025-05-20T16:50:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0056",
+    "token": "SHIB",
+    "caller": "@TokenVision",
+    "confidence": 71,
+    "createdAt": "2025-05-20T16:57:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0057",
+    "token": "UNI",
+    "caller": "@DefiMaster",
+    "confidence": 45,
+    "createdAt": "2025-05-20T17:04:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0058",
+    "token": "SHIB",
+    "caller": "@OnChainAnalyst",
+    "confidence": 62,
+    "createdAt": "2025-05-20T17:11:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0059",
+    "token": "DOT",
+    "caller": "@TechTrader",
+    "confidence": 58,
+    "createdAt": "2025-05-20T17:18:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0060",
+    "token": "PEPE",
+    "caller": "@AlphaHunter",
+    "confidence": 57,
+    "createdAt": "2025-05-20T17:25:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0061",
+    "token": "AVAX",
+    "caller": "@CryptoWizard",
+    "confidence": 60,
+    "createdAt": "2025-05-20T17:32:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0062",
+    "token": "ADA",
+    "caller": "@TokenSage",
+    "confidence": 80,
+    "createdAt": "2025-05-20T17:39:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0063",
+    "token": "ETH",
+    "caller": "@DefiMaster",
+    "confidence": 68,
+    "createdAt": "2025-05-20T17:46:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0064",
+    "token": "SOL",
+    "caller": "@TechTrader",
+    "confidence": 50,
+    "createdAt": "2025-05-20T17:53:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0065",
+    "token": "XRP",
+    "caller": "@TokenSage",
+    "confidence": 47,
+    "createdAt": "2025-05-20T18:00:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0066",
+    "token": "PEPE",
+    "caller": "@TokenVision",
+    "confidence": 52,
+    "createdAt": "2025-05-20T18:07:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0067",
+    "token": "BTC",
+    "caller": "@OnChainAnalyst",
+    "confidence": 65,
+    "createdAt": "2025-05-20T18:14:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0068",
+    "token": "SOL",
+    "caller": "@BlockExpert",
+    "confidence": 79,
+    "createdAt": "2025-05-20T18:21:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0069",
+    "token": "LINK",
+    "caller": "@TokenVision",
+    "confidence": 74,
+    "createdAt": "2025-05-20T18:28:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0070",
+    "token": "DOGE",
+    "caller": "@TokenVision",
+    "confidence": 70,
+    "createdAt": "2025-05-20T18:35:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0071",
+    "token": "BNB",
+    "caller": "@AlphaHunter",
+    "confidence": 61,
+    "createdAt": "2025-05-20T18:42:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0072",
+    "token": "UNI",
+    "caller": "@BlockExpert",
+    "confidence": 90,
+    "createdAt": "2025-05-20T18:49:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0073",
+    "token": "SOL",
+    "caller": "@TechTrader",
+    "confidence": 65,
+    "createdAt": "2025-05-20T18:56:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0074",
+    "token": "BNB",
+    "caller": "@TechTrader",
+    "confidence": 47,
+    "createdAt": "2025-05-20T19:03:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0075",
+    "token": "UNI",
+    "caller": "@SmartDeFi",
+    "confidence": 69,
+    "createdAt": "2025-05-20T19:10:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0076",
+    "token": "ETH",
+    "caller": "@TokenSage",
+    "confidence": 58,
+    "createdAt": "2025-05-20T19:17:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0077",
+    "token": "SOL",
+    "caller": "@AlphaHunter",
+    "confidence": 69,
+    "createdAt": "2025-05-20T19:24:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0078",
+    "token": "AAVE",
+    "caller": "@ChainGuru",
+    "confidence": 46,
+    "createdAt": "2025-05-20T19:31:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0079",
+    "token": "AAVE",
+    "caller": "@CryptoWizard",
+    "confidence": 53,
+    "createdAt": "2025-05-20T19:38:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0080",
+    "token": "SHIB",
+    "caller": "@BlockExpert",
+    "confidence": 46,
+    "createdAt": "2025-05-20T19:45:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0081",
+    "token": "DOGE",
+    "caller": "@ChainGuru",
+    "confidence": 71,
+    "createdAt": "2025-05-20T19:52:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0082",
+    "token": "SOL",
+    "caller": "@TechTrader",
+    "confidence": 50,
+    "createdAt": "2025-05-20T19:59:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0083",
+    "token": "MATIC",
+    "caller": "@SmartDeFi",
+    "confidence": 75,
+    "createdAt": "2025-05-20T20:06:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0084",
+    "token": "LINK",
+    "caller": "@AlphaHunter",
+    "confidence": 57,
+    "createdAt": "2025-05-20T20:13:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0085",
+    "token": "SOL",
+    "caller": "@SmartDeFi",
+    "confidence": 76,
+    "createdAt": "2025-05-20T20:20:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0086",
+    "token": "ADA",
+    "caller": "@BlockExpert",
+    "confidence": 69,
+    "createdAt": "2025-05-20T20:27:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0087",
+    "token": "LINK",
+    "caller": "@TechTrader",
+    "confidence": 69,
+    "createdAt": "2025-05-20T20:34:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0088",
+    "token": "UNI",
+    "caller": "@TechTrader",
+    "confidence": 56,
+    "createdAt": "2025-05-20T20:41:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0089",
+    "token": "PEPE",
+    "caller": "@CryptoWizard",
+    "confidence": 48,
+    "createdAt": "2025-05-20T20:48:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0090",
+    "token": "DOGE",
+    "caller": "@AlphaHunter",
+    "confidence": 65,
+    "createdAt": "2025-05-20T20:55:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0091",
+    "token": "DOGE",
+    "caller": "@TokenSage",
+    "confidence": 77,
+    "createdAt": "2025-05-20T21:02:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0092",
+    "token": "AVAX",
+    "caller": "@TechTrader",
+    "confidence": 72,
+    "createdAt": "2025-05-20T21:09:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0093",
+    "token": "XRP",
+    "caller": "@TechTrader",
+    "confidence": 71,
+    "createdAt": "2025-05-20T21:16:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0094",
+    "token": "PEPE",
+    "caller": "@BlockExpert",
+    "confidence": 85,
+    "createdAt": "2025-05-20T21:23:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0095",
+    "token": "PEPE",
+    "caller": "@TechTrader",
+    "confidence": 68,
+    "createdAt": "2025-05-20T21:30:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0096",
+    "token": "SOL",
+    "caller": "@TokenSage",
+    "confidence": 58,
+    "createdAt": "2025-05-20T21:37:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0097",
+    "token": "XRP",
+    "caller": "@DefiMaster",
+    "confidence": 71,
+    "createdAt": "2025-05-20T21:44:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0098",
+    "token": "UNI",
+    "caller": "@OnChainAnalyst",
+    "confidence": 64,
+    "createdAt": "2025-05-20T21:51:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0099",
+    "token": "DOGE",
+    "caller": "@AlphaHunter",
+    "confidence": 42,
+    "createdAt": "2025-05-20T21:58:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0100",
+    "token": "AAVE",
+    "caller": "@OnChainAnalyst",
+    "confidence": 63,
+    "createdAt": "2025-05-20T22:05:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0101",
+    "token": "MATIC",
+    "caller": "@CryptoWizard",
+    "confidence": 82,
+    "createdAt": "2025-05-20T22:12:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0102",
+    "token": "SHIB",
+    "caller": "@TokenSage",
+    "confidence": 73,
+    "createdAt": "2025-05-20T22:19:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0103",
+    "token": "ADA",
+    "caller": "@OnChainAnalyst",
+    "confidence": 60,
+    "createdAt": "2025-05-20T22:26:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0104",
+    "token": "ETH",
+    "caller": "@CryptoWizard",
+    "confidence": 69,
+    "createdAt": "2025-05-20T22:33:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0105",
+    "token": "DOT",
+    "caller": "@DefiMaster",
+    "confidence": 68,
+    "createdAt": "2025-05-20T22:40:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0106",
+    "token": "SHIB",
+    "caller": "@AlphaHunter",
+    "confidence": 56,
+    "createdAt": "2025-05-20T22:47:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0107",
+    "token": "LINK",
+    "caller": "@OnChainAnalyst",
+    "confidence": 84,
+    "createdAt": "2025-05-20T22:54:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0108",
+    "token": "BTC",
+    "caller": "@ChainGuru",
+    "confidence": 80,
+    "createdAt": "2025-05-20T23:01:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0109",
+    "token": "SHIB",
+    "caller": "@ChainGuru",
+    "confidence": 81,
+    "createdAt": "2025-05-20T23:08:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0110",
+    "token": "DOT",
+    "caller": "@ChainGuru",
+    "confidence": 68,
+    "createdAt": "2025-05-20T23:15:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0111",
+    "token": "SOL",
+    "caller": "@TechTrader",
+    "confidence": 65,
+    "createdAt": "2025-05-20T23:22:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0112",
+    "token": "UNI",
+    "caller": "@SmartDeFi",
+    "confidence": 48,
+    "createdAt": "2025-05-20T23:29:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0113",
+    "token": "PEPE",
+    "caller": "@SmartDeFi",
+    "confidence": 55,
+    "createdAt": "2025-05-20T23:36:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0114",
+    "token": "LINK",
+    "caller": "@DefiMaster",
+    "confidence": 56,
+    "createdAt": "2025-05-20T23:43:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0115",
+    "token": "DOGE",
+    "caller": "@ChainGuru",
+    "confidence": 65,
+    "createdAt": "2025-05-20T23:50:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0116",
+    "token": "PEPE",
+    "caller": "@TechTrader",
+    "confidence": 64,
+    "createdAt": "2025-05-20T23:57:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0117",
+    "token": "AVAX",
+    "caller": "@SmartDeFi",
+    "confidence": 66,
+    "createdAt": "2025-05-21T00:04:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0118",
+    "token": "SHIB",
+    "caller": "@SmartDeFi",
+    "confidence": 41,
+    "createdAt": "2025-05-21T00:11:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0119",
+    "token": "DOT",
+    "caller": "@SmartDeFi",
+    "confidence": 68,
+    "createdAt": "2025-05-21T00:18:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0120",
+    "token": "DOGE",
+    "caller": "@DefiMaster",
+    "confidence": 60,
+    "createdAt": "2025-05-21T00:25:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0121",
+    "token": "BTC",
+    "caller": "@TokenVision",
+    "confidence": 36,
+    "createdAt": "2025-05-21T00:32:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0122",
+    "token": "DOGE",
+    "caller": "@BlockExpert",
+    "confidence": 41,
+    "createdAt": "2025-05-21T00:39:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0123",
+    "token": "AAVE",
+    "caller": "@TokenVision",
+    "confidence": 66,
+    "createdAt": "2025-05-21T00:46:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0124",
+    "token": "AVAX",
+    "caller": "@AlphaHunter",
+    "confidence": 62,
+    "createdAt": "2025-05-21T00:53:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0125",
+    "token": "BNB",
+    "caller": "@TokenSage",
+    "confidence": 60,
+    "createdAt": "2025-05-21T01:00:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0126",
+    "token": "AVAX",
+    "caller": "@TokenSage",
+    "confidence": 53,
+    "createdAt": "2025-05-21T01:07:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0127",
+    "token": "LINK",
+    "caller": "@AlphaHunter",
+    "confidence": 65,
+    "createdAt": "2025-05-21T01:14:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0128",
+    "token": "SHIB",
+    "caller": "@CryptoWizard",
+    "confidence": 75,
+    "createdAt": "2025-05-21T01:21:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0129",
+    "token": "SOL",
+    "caller": "@SmartDeFi",
+    "confidence": 41,
+    "createdAt": "2025-05-21T01:28:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0130",
+    "token": "AAVE",
+    "caller": "@AlphaHunter",
+    "confidence": 67,
+    "createdAt": "2025-05-21T01:35:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0131",
+    "token": "XRP",
+    "caller": "@DefiMaster",
+    "confidence": 60,
+    "createdAt": "2025-05-21T01:42:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0132",
+    "token": "LINK",
+    "caller": "@TechTrader",
+    "confidence": 76,
+    "createdAt": "2025-05-21T01:49:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0133",
+    "token": "SOL",
+    "caller": "@TokenSage",
+    "confidence": 59,
+    "createdAt": "2025-05-21T01:56:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0134",
+    "token": "AAVE",
+    "caller": "@OnChainAnalyst",
+    "confidence": 82,
+    "createdAt": "2025-05-21T02:03:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0135",
+    "token": "XRP",
+    "caller": "@CryptoWizard",
+    "confidence": 60,
+    "createdAt": "2025-05-21T02:10:55.742Z",
+    "rationaleMd": "# XRP Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0136",
+    "token": "UNI",
+    "caller": "@AlphaHunter",
+    "confidence": 44,
+    "createdAt": "2025-05-21T02:17:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0137",
+    "token": "AVAX",
+    "caller": "@TechTrader",
+    "confidence": 84,
+    "createdAt": "2025-05-21T02:24:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0138",
+    "token": "ETH",
+    "caller": "@TechTrader",
+    "confidence": 67,
+    "createdAt": "2025-05-21T02:31:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0139",
+    "token": "BTC",
+    "caller": "@TokenSage",
+    "confidence": 83,
+    "createdAt": "2025-05-21T02:38:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0140",
+    "token": "SHIB",
+    "caller": "@DefiMaster",
+    "confidence": 92,
+    "createdAt": "2025-05-21T02:45:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0141",
+    "token": "SOL",
+    "caller": "@OnChainAnalyst",
+    "confidence": 56,
+    "createdAt": "2025-05-21T02:52:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0142",
+    "token": "SHIB",
+    "caller": "@TokenSage",
+    "confidence": 85,
+    "createdAt": "2025-05-21T02:59:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0143",
+    "token": "AVAX",
+    "caller": "@ChainGuru",
+    "confidence": 70,
+    "createdAt": "2025-05-21T03:06:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0144",
+    "token": "MATIC",
+    "caller": "@ChainGuru",
+    "confidence": 59,
+    "createdAt": "2025-05-21T03:13:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0145",
+    "token": "MATIC",
+    "caller": "@SmartDeFi",
+    "confidence": 67,
+    "createdAt": "2025-05-21T03:20:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0146",
+    "token": "PEPE",
+    "caller": "@TechTrader",
+    "confidence": 79,
+    "createdAt": "2025-05-21T03:27:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0147",
+    "token": "DOGE",
+    "caller": "@OnChainAnalyst",
+    "confidence": 71,
+    "createdAt": "2025-05-21T03:34:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0148",
+    "token": "ADA",
+    "caller": "@CryptoWizard",
+    "confidence": 49,
+    "createdAt": "2025-05-21T03:41:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0149",
+    "token": "DOT",
+    "caller": "@SmartDeFi",
+    "confidence": 40,
+    "createdAt": "2025-05-21T03:48:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0150",
+    "token": "SOL",
+    "caller": "@OnChainAnalyst",
+    "confidence": 86,
+    "createdAt": "2025-05-21T03:55:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0151",
+    "token": "ETH",
+    "caller": "@CryptoWizard",
+    "confidence": 67,
+    "createdAt": "2025-05-21T04:02:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0152",
+    "token": "ETH",
+    "caller": "@BlockExpert",
+    "confidence": 78,
+    "createdAt": "2025-05-21T04:09:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0153",
+    "token": "ADA",
+    "caller": "@DefiMaster",
+    "confidence": 63,
+    "createdAt": "2025-05-21T04:16:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0154",
+    "token": "UNI",
+    "caller": "@BlockExpert",
+    "confidence": 63,
+    "createdAt": "2025-05-21T04:23:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0155",
+    "token": "MATIC",
+    "caller": "@ChainGuru",
+    "confidence": 67,
+    "createdAt": "2025-05-21T04:30:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0156",
+    "token": "UNI",
+    "caller": "@DefiMaster",
+    "confidence": 60,
+    "createdAt": "2025-05-21T04:37:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0157",
+    "token": "ADA",
+    "caller": "@TokenVision",
+    "confidence": 85,
+    "createdAt": "2025-05-21T04:44:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0158",
+    "token": "BTC",
+    "caller": "@ChainGuru",
+    "confidence": 70,
+    "createdAt": "2025-05-21T04:51:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0159",
+    "token": "MATIC",
+    "caller": "@CryptoWizard",
+    "confidence": 41,
+    "createdAt": "2025-05-21T04:58:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0160",
+    "token": "BTC",
+    "caller": "@TokenVision",
+    "confidence": 81,
+    "createdAt": "2025-05-21T05:05:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0161",
+    "token": "BNB",
+    "caller": "@BlockExpert",
+    "confidence": 76,
+    "createdAt": "2025-05-21T05:12:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0162",
+    "token": "MATIC",
+    "caller": "@CryptoWizard",
+    "confidence": 61,
+    "createdAt": "2025-05-21T05:19:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0163",
+    "token": "PEPE",
+    "caller": "@BlockExpert",
+    "confidence": 69,
+    "createdAt": "2025-05-21T05:26:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0164",
+    "token": "SHIB",
+    "caller": "@TechTrader",
+    "confidence": 92,
+    "createdAt": "2025-05-21T05:33:55.742Z",
+    "rationaleMd": "# SHIB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0165",
+    "token": "BTC",
+    "caller": "@CryptoWizard",
+    "confidence": 62,
+    "createdAt": "2025-05-21T05:40:55.742Z",
+    "rationaleMd": "# BTC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0166",
+    "token": "AAVE",
+    "caller": "@TokenSage",
+    "confidence": 60,
+    "createdAt": "2025-05-21T05:47:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0167",
+    "token": "PEPE",
+    "caller": "@AlphaHunter",
+    "confidence": 47,
+    "createdAt": "2025-05-21T05:54:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0168",
+    "token": "AAVE",
+    "caller": "@TokenSage",
+    "confidence": 61,
+    "createdAt": "2025-05-21T06:01:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0169",
+    "token": "LINK",
+    "caller": "@BlockExpert",
+    "confidence": 49,
+    "createdAt": "2025-05-21T06:08:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0170",
+    "token": "UNI",
+    "caller": "@TechTrader",
+    "confidence": 33,
+    "createdAt": "2025-05-21T06:15:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0171",
+    "token": "BNB",
+    "caller": "@TokenSage",
+    "confidence": 54,
+    "createdAt": "2025-05-21T06:22:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0172",
+    "token": "SOL",
+    "caller": "@DefiMaster",
+    "confidence": 81,
+    "createdAt": "2025-05-21T06:29:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0173",
+    "token": "UNI",
+    "caller": "@TokenSage",
+    "confidence": 45,
+    "createdAt": "2025-05-21T06:36:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0174",
+    "token": "LINK",
+    "caller": "@TechTrader",
+    "confidence": 52,
+    "createdAt": "2025-05-21T06:43:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0175",
+    "token": "BNB",
+    "caller": "@DefiMaster",
+    "confidence": 86,
+    "createdAt": "2025-05-21T06:50:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0176",
+    "token": "UNI",
+    "caller": "@CryptoWizard",
+    "confidence": 81,
+    "createdAt": "2025-05-21T06:57:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0177",
+    "token": "AAVE",
+    "caller": "@ChainGuru",
+    "confidence": 74,
+    "createdAt": "2025-05-21T07:04:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0178",
+    "token": "MATIC",
+    "caller": "@ChainGuru",
+    "confidence": 48,
+    "createdAt": "2025-05-21T07:11:55.742Z",
+    "rationaleMd": "# MATIC Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0179",
+    "token": "SOL",
+    "caller": "@ChainGuru",
+    "confidence": 53,
+    "createdAt": "2025-05-21T07:18:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0180",
+    "token": "LINK",
+    "caller": "@CryptoWizard",
+    "confidence": 89,
+    "createdAt": "2025-05-21T07:25:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0181",
+    "token": "SOL",
+    "caller": "@BlockExpert",
+    "confidence": 61,
+    "createdAt": "2025-05-21T07:32:55.742Z",
+    "rationaleMd": "# SOL Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0182",
+    "token": "BNB",
+    "caller": "@TokenVision",
+    "confidence": 86,
+    "createdAt": "2025-05-21T07:39:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0183",
+    "token": "PEPE",
+    "caller": "@SmartDeFi",
+    "confidence": 81,
+    "createdAt": "2025-05-21T07:46:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0184",
+    "token": "ETH",
+    "caller": "@BlockExpert",
+    "confidence": 66,
+    "createdAt": "2025-05-21T07:53:55.742Z",
+    "rationaleMd": "# $ETH Analysis\n\n## Technical Factors\n- Clear breakout above 200-day moving average\n- Bull flag formation completed on daily chart\n- Decreasing sell pressure at key resistance levels\n- Bollinger Bands expanding indicating potential volatility\n\n## On-Chain Metrics\n- ETH staking rate increased to all-time high of 32.5%\n- Significant reduction in exchange balances (-4.7% MTD)\n- Gas fees stabilizing at lower levels improving user experience\n- ETH burned via EIP-1559 accelerating, net deflationary last 72h\n\n## Market Context\n- DeFi TVL growing on Ethereum (+12% over 30 days)\n- Layer 2 adoption metrics showing continued growth\n- Major protocol upgrades approaching (positive sentiment)\n- Institutional products showing increased capital inflows\n\n## Risk Assessment\nAfter analyzing on-chain metrics, technical patterns, and macro context, I am **85% confident** this represents a strong opportunity with favorable risk-reward dynamics."
+  },
+  {
+    "id": "sig_0185",
+    "token": "AAVE",
+    "caller": "@TokenVision",
+    "confidence": 58,
+    "createdAt": "2025-05-21T08:00:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0186",
+    "token": "DOT",
+    "caller": "@AlphaHunter",
+    "confidence": 83,
+    "createdAt": "2025-05-21T08:07:55.742Z",
+    "rationaleMd": "# DOT Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0187",
+    "token": "UNI",
+    "caller": "@BlockExpert",
+    "confidence": 66,
+    "createdAt": "2025-05-21T08:14:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0188",
+    "token": "LINK",
+    "caller": "@TechTrader",
+    "confidence": 90,
+    "createdAt": "2025-05-21T08:21:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0189",
+    "token": "UNI",
+    "caller": "@CryptoWizard",
+    "confidence": 67,
+    "createdAt": "2025-05-21T08:28:55.742Z",
+    "rationaleMd": "# UNI Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0190",
+    "token": "ADA",
+    "caller": "@DefiMaster",
+    "confidence": 78,
+    "createdAt": "2025-05-21T08:35:55.742Z",
+    "rationaleMd": "# ADA Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0191",
+    "token": "BNB",
+    "caller": "@BlockExpert",
+    "confidence": 92,
+    "createdAt": "2025-05-21T08:42:55.742Z",
+    "rationaleMd": "# BNB Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0192",
+    "token": "PEPE",
+    "caller": "@TechTrader",
+    "confidence": 65,
+    "createdAt": "2025-05-21T08:49:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0193",
+    "token": "DOGE",
+    "caller": "@TokenSage",
+    "confidence": 40,
+    "createdAt": "2025-05-21T08:56:55.742Z",
+    "rationaleMd": "# DOGE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0194",
+    "token": "LINK",
+    "caller": "@ChainGuru",
+    "confidence": 50,
+    "createdAt": "2025-05-21T09:03:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0195",
+    "token": "AAVE",
+    "caller": "@OnChainAnalyst",
+    "confidence": 37,
+    "createdAt": "2025-05-21T09:10:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0196",
+    "token": "AAVE",
+    "caller": "@TechTrader",
+    "confidence": 39,
+    "createdAt": "2025-05-21T09:17:55.742Z",
+    "rationaleMd": "# AAVE Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0197",
+    "token": "LINK",
+    "caller": "@TokenSage",
+    "confidence": 63,
+    "createdAt": "2025-05-21T09:24:55.742Z",
+    "rationaleMd": "# LINK Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  },
+  {
+    "id": "sig_0198",
+    "token": "PEPE",
+    "caller": "@TokenVision",
+    "confidence": 72,
+    "createdAt": "2025-05-21T09:31:55.742Z",
+    "rationaleMd": "# $PEPE Analysis\n\n## Technical Factors\n- Strong bounce off 0.618 Fibonacci level\n- MACD crossover confirmed on 4H chart\n- Volume increasing +32% above 20-day average\n- RSI recovering from oversold condition\n\n## On-Chain Metrics\n- Large wallet accumulation detected (top 50 holders +3.2%)\n- Exchange outflows > inflows for 3 consecutive days\n- Gas usage trending up indicating increased network activity\n- Funding rates normalized after recent volatility\n\n## Market Context\n- Meme coin sector showing signs of recovery\n- BTC dominance decreasing, typically bullish for alts\n- Social sentiment analysis shows positive momentum shift\n- Recent ecosystem announcements driving renewed interest\n\n## Risk Assessment\nGiven the above factors, I am **70% confident** this represents a favorable entry point with positive short-term momentum."
+  },
+  {
+    "id": "sig_0199",
+    "token": "AVAX",
+    "caller": "@DefiMaster",
+    "confidence": 48,
+    "createdAt": "2025-05-21T09:38:55.742Z",
+    "rationaleMd": "# AVAX Analysis\n\nTechnical and fundamental analysis indicates a favorable entry point based on recent market movements."
+  }
+]
