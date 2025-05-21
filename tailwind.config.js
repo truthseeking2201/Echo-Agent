@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         // Core colors
         bg: { 
-          900: '#070709' // Deep-space black, eye-friendly
+          900: '#070709', // Deep-space black, eye-friendly
+          800: '#0C0C10' // Slightly lighter for layering
         },
         panel: 'rgba(255,255,255,0.06)', // Frosted glass panels
         primary: '#00E5EE', // CTAs & key links
@@ -19,6 +20,14 @@ module.exports = {
           200: '#FF6D9C',
           300: '#FB7E16' 
         },
+        // Enhanced AI color palette
+        ai: {
+          blue: '#0090FF',
+          purple: '#A855F7',
+          pink: '#FF6D9C',
+          orange: '#FB7E16',
+          cyan: '#00E5EE'
+        },
         // States with +10% saturation to pop over dark canvas
         success: '#22E570',
         warning: '#FADC15',
@@ -27,6 +36,7 @@ module.exports = {
       backgroundImage: {
         // AI Gradient for button borders, progress bars
         'ai-gradient': 'linear-gradient(90deg,#FFF -4%,#0090FF 22%,#FF6D9C 48%,#FB7E16 74%,#FFF 100%)',
+        'ai-vibrant': 'linear-gradient(90deg,#00E5EE,#A855F7,#FF6D9C)',
         'ai-shimmer': 'linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)',
         // Particle effects
         'matrix-sparkle': 'radial-gradient(circle at center, rgba(0,229,238,0.15) 0%, rgba(0,0,0,0) 70%)',
@@ -36,11 +46,12 @@ module.exports = {
         'neon-accent': '0 0 12px var(--c-accent)',
         glass: '0 8px 32px rgba(0, 0, 0, 0.2)',
         'card-hover': '0 8px 32px rgba(0, 0, 0, 0.3)',
+        'ai-glow': '0 0 20px rgba(0, 229, 238, 0.4)',
       },
       fontFamily: {
         // Typography (Google Fonts)
-        display: ['"Sora Variable"', 'sans-serif'],
-        body: ['"Work Sans Variable"', 'sans-serif'],
+        display: ['"Sora"', 'sans-serif'],
+        body: ['"Work Sans"', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'monospace'],
       },
       borderRadius: {
@@ -70,6 +81,7 @@ module.exports = {
         'skeleton': 'shimmer 1.5s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
         'gradient-ring': 'gradient-ring 3s linear infinite',
+        'gradient-flow': 'gradient-flow 3s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'matrix-particles': 'matrix-particles 15s linear infinite',
       },
@@ -85,6 +97,11 @@ module.exports = {
         'gradient-ring': {
           '0%': { backgroundPosition: '0% 0%' },
           '100%': { backgroundPosition: '400% 0%' },
+        },
+        'gradient-flow': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
         'float': {
           '0%, 100%': { transform: 'translateY(0)' },
@@ -103,7 +120,7 @@ module.exports = {
         'body': '1.6',
       },
       backdropBlur: {
-        'glass': '8px',
+        'glass': '12px',
       },
     },
   },

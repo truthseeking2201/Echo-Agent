@@ -10,7 +10,7 @@ interface ToastState {
 
 interface UseAutoTradeResult {
   toast: ToastState;
-  handleAutoTrade: () => Promise<void>;
+  handleAutoTrade: () => Promise<boolean>;
   closeToast: () => void;
 }
 
@@ -22,11 +22,16 @@ export const useAutoTrade = (): UseAutoTradeResult => {
   const { connectWallet, mirror, wallet } = useEchoStore();
   const [toast, setToast] = useState<ToastState>({ visible: false, message: '', type: 'info' });
 
-  const handleAutoTrade = async (): Promise<void> => {
+  const handleAutoTrade = async (): Promise<boolean> => {
     // Check wallet connection
     if (!wallet.connected) {
       connectWallet();
-      return;
+      setToast({
+        visible: true,
+        message: 'Wallet not connected. Please connect your wallet.',
+        type: 'info'
+      });
+      return false;
     }
     
     // Get latest signals state
@@ -36,10 +41,10 @@ export const useAutoTrade = (): UseAutoTradeResult => {
     if (store.signals.length === 0) {
       setToast({
         visible: true,
-        message: 'Waiting for signals...',
+        message: 'No signals available to auto-trade. Waiting for new signals...',
         type: 'info'
       });
-      return;
+      return false;
     }
     
     // Take the first signal and mirror it
@@ -57,18 +62,20 @@ export const useAutoTrade = (): UseAutoTradeResult => {
       // Show success toast
       setToast({
         visible: true,
-        message: `Signal locked, profit potential engaged 🚀`,
+        message: `Signal locked for ${trade.token}, profit potential engaged 🚀`,
         type: 'success'
       });
+      return true;
     } catch (error) {
       console.error('Error mirroring trade:', error);
       
       // Show error toast with the actual error message
       setToast({
         visible: true,
-        message: `Error: ${error instanceof Error ? error.message : 'Unknown error occurred'}`,
+        message: `Auto-Trade Error: ${error instanceof Error ? error.message : 'Unknown error occurred'}`,
         type: 'error'
       });
+      return false;
     }
   };
 

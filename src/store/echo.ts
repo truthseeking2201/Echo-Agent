@@ -42,7 +42,8 @@ export interface EchoState {
   };
   
   // Actions
-  connectWallet: () => void;
+  connectWallet: () => Promise<string>;
+  disconnectWallet: () => void;
   mirror: (signalId: string) => Promise<Trade>;
   togglePause: () => void;
   setRisk: (n: number) => void;
@@ -77,7 +78,16 @@ export const useEchoStore = create<EchoState>()(
       // Actions
       connectWallet: async () => {
         // Mock wallet connection
-        set({ wallet: { addr: '0xDEMO...', connected: true } });
+        const mockAddress = `0x${[...Array(40)].map(() => Math.floor(Math.random() * 16).toString(16)).join('')}`;
+        return new Promise((resolve) => {
+          setTimeout(() => { // Simulate a short delay for connection
+            set({ wallet: { addr: mockAddress, connected: true } });
+            resolve(mockAddress);
+          }, 500);
+        });
+      },
+      disconnectWallet: () => {
+        set({ wallet: { addr: null, connected: false } });
       },
       
       mirror: async (signalId) => {

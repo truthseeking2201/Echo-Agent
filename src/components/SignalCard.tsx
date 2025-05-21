@@ -126,7 +126,7 @@ export const SignalCard: React.FC<SignalCardProps> = ({
       openDrawer(
         <div className="space-y-6">
           <div className="flex items-center">
-            <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
+            <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-3 border border-primary/30">
               <span className="text-lg font-mono font-medium text-primary">${token[0]}</span>
             </div>
             <div>
@@ -197,7 +197,7 @@ export const SignalCard: React.FC<SignalCardProps> = ({
           transform: { duration: 0.2, ease: "easeOut" }
         }}
       >
-        {/* Glow overlay with dynamic intensity */}
+        {/* Enhanced glow overlay with dynamic intensity and AI-themed color */}
         <motion.div 
           className="absolute inset-0 pointer-events-none rounded-card"
           style={{ 
@@ -206,6 +206,54 @@ export const SignalCard: React.FC<SignalCardProps> = ({
             transition: 'opacity 0.3s ease-out'
           }}
         />
+        
+        {/* Add subtle AI scanner line effect */}
+        <motion.div
+          className="absolute inset-0 overflow-hidden pointer-events-none opacity-30"
+          initial={{ opacity: 0 }}
+          animate={isHovered ? { opacity: 0.5 } : { opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.div
+            className="w-full h-1 bg-ai-gradient"
+            style={{ 
+              background: 'linear-gradient(90deg, transparent, var(--c-ai-cyan), transparent)',
+              boxShadow: '0 0 10px var(--c-ai-cyan)'
+            }}
+            animate={isHovered ? {
+              y: ['0%', '100%', '0%'],
+            } : {}}
+            transition={isHovered ? {
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear",
+            } : {}}
+          />
+        </motion.div>
+        
+        {/* Add subtle particle effects */}
+        <div className="absolute inset-0 overflow-hidden opacity-30 pointer-events-none">
+          <div className="particle-container">
+            {[...Array(5)].map((_, i) => (
+              <div 
+                key={i} 
+                className="particle"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  width: `${Math.random() * 3 + 1}px`,
+                  height: `${Math.random() * 3 + 1}px`,
+                  opacity: Math.random() * 0.5 + 0.3,
+                  animationDuration: `${Math.random() * 5 + 10}s`,
+                  animationDelay: `${Math.random() * 2}s`,
+                  background: confidence >= 70 ? 'rgba(34, 229, 112, 0.8)' : 
+                              confidence >= 50 ? 'rgba(250, 220, 21, 0.8)' : 
+                              'rgba(248, 120, 120, 0.8)'
+                }}
+              />
+            ))}
+          </div>
+        </div>
   
         {/* Card content with inner parallax */}
         <motion.div 
@@ -218,7 +266,7 @@ export const SignalCard: React.FC<SignalCardProps> = ({
           {/* Token/Caller header row */}
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center">
-              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-2">
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-2 border border-primary/30 shadow-ai-glow">
                 <span className="text-sm font-mono font-medium text-primary">${token[0]}</span>
               </div>
               <div>
@@ -228,66 +276,88 @@ export const SignalCard: React.FC<SignalCardProps> = ({
                 >
                   ${token}
                 </h3>
-                <p className="text-xs font-body text-white/60">{caller}</p>
+                <div className="flex items-center">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary/80 mr-1.5 animate-pulse"></div>
+                  <p className="text-xs font-body text-white/70">{caller}</p>
+                </div>
               </div>
             </div>
             
-            {/* Right side */}
-            <div>
-              <span className={`text-sm font-mono font-medium ${getConfidenceTextColor()}`}>
+            {/* Right side with confidence badge */}
+            <div className="relative">
+              <div className={`
+                px-2 py-0.5 rounded-lg text-xs font-mono font-medium backdrop-blur-sm
+                ${confidence >= 70 ? 'bg-success/20 text-success border border-success/30' : 
+                confidence >= 50 ? 'bg-warning/20 text-warning border border-warning/30' : 
+                'bg-error/20 text-error border border-error/30'}
+              `}>
                 {confidence}%
-              </span>
+              </div>
             </div>
           </div>
           
-          {/* Confidence gauge with animated fill */}
-          <div className="mt-2 relative">
-            <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+          {/* Confidence gauge with animated fill and enhanced style */}
+          <div className="mt-3 relative">
+            <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
               <motion.div 
                 className={`h-full ${getConfidenceColor()}`}
                 initial={{ width: 0 }}
                 animate={{ width: `${confidence}%` }}
                 transition={{ 
-                  duration: 0.6,
+                  duration: durations.medium,
                   ease: standardEasing
+                }}
+                style={{
+                  boxShadow: confidence >= 70 ? '0 0 10px rgba(34, 229, 112, 0.5)' : 
+                             confidence >= 50 ? '0 0 10px rgba(250, 220, 21, 0.5)' : 
+                             '0 0 10px rgba(248, 120, 120, 0.5)'
                 }}
               />
             </div>
           </div>
           
-          {/* Content preview */}
-          <div className="mt-3 text-xs text-white/70 line-clamp-2">
+          {/* Preview text with AI-styled background */}
+          <div className="mt-3 text-xs text-white/80 line-clamp-2 glassmorphic p-2">
             {previewText}
           </div>
           
-          {/* Footer with date and show details button */}
-          <div className="mt-3 flex justify-between items-center">
-            <span className="text-xs font-mono text-white/40">
+          {/* Data row with enhanced styling */}
+          <div className="mt-3 flex items-center justify-between pt-2 border-t border-white/10">
+            <div className="text-xs text-white/50 font-mono">
               {formattedDate}
-            </span>
+            </div>
             
-            {/* Mirror button - compact, appears on hover or if focused */}
-            <motion.div 
-              className="absolute bottom-3 right-3 z-20"
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 5 }}
-              transition={{ duration: durations.fast, ease: standardEasing }}
+            {/* Mirror trade button with enhanced styling */}
+            <motion.button
+              onClick={(e) => {
+                e.stopPropagation();
+                if (showDetails) {
+                  showDetails();
+                } else {
+                  handleShowDetails();
+                }
+                if (!isPaused) {
+                  onMirror(id);
+                }
+              }}
+              disabled={isPaused}
+              className={`
+                text-white text-xs font-medium px-3 py-1.5 rounded-md border transition-colors duration-fast 
+                backdrop-blur-sm
+                ${isPaused ? 
+                  'bg-white/5 border-white/10 text-white/40 cursor-not-allowed' : 
+                  'bg-primary/10 border-primary/30 hover:bg-primary/20 shadow-ai-glow'}
+              `}
+              whileHover={{ scale: isPaused ? 1 : 1.05 }}
+              whileTap={{ scale: isPaused ? 1 : 0.97 }}
             >
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={(e) => { 
-                  if (e) e.stopPropagation(); 
-                  handleShowDetails(); 
-                }}
-                disabled={isPaused}
-                ariaLabel={`Mirror signal for ${token}`}
-                aria-labelledby={`sig-${id}`}
-                withSound
-              >
+              <span className="flex items-center">
+                <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10"></path>
+                </svg>
                 Mirror
-              </Button>
-            </motion.div>
+              </span>
+            </motion.button>
           </div>
         </motion.div>
       </motion.div>
