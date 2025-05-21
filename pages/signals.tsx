@@ -72,8 +72,6 @@ const Signals: NextPage = () => {
         type: 'success'
       });
       
-      // Close the drawer if open
-      closeDrawer();
     } catch (error) {
       console.error('Error mirroring trade:', error);
       
