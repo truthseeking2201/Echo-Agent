@@ -122,14 +122,6 @@ export const LayoutShell: React.FC<LayoutShellProps> = ({
       {/* Matrix grid background - layer 1 */}
       <div className="base-layer"></div>
       
-      {/* Fixed top badge for DEMO MODE */}
-      <div 
-        className="fixed top-3 right-3 z-50 px-2 py-1 text-xs font-bold rounded-md bg-purple-500 text-white shadow-glow"
-        title="Synthetic data, no real funds exchanged"
-      >
-        DEMO DATA
-      </div>
-      
       {/* Top Navigation Bar - simplified with only 3 tabs */}
       <header className="sticky top-0 z-40 bg-bg-900/80 backdrop-blur-glass border-b border-white/10">
         <div className="max-w-content px-4 py-3 flex items-center justify-between">

@@ -13,6 +13,7 @@ import { normalDist, clamp } from '../mocks/generators/random';
 import Toast, { ToastType } from '@/components/Toast';
 import useAutoTrade from '@/utils/useAutoTrade';
 import { AutoTradeModal } from '@/components/AutoTradeModal';
+import PurposeBanner from '@/components/PurposeBanner';
 
 type AutoTradeEngagedStateType = 'idle' | 'processing' | 'active' | 'failed';
 
@@ -196,6 +197,7 @@ const Overview: NextPage = () => {
 
   return (
     <LayoutShell title="Overview">
+      <PurposeBanner />
       {/* Hero Section */}
       <motion.div 
         className="mb-8 relative overflow-hidden neo-card p-6"
