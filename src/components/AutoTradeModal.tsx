@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { standardEasing, durations } from '@/utils/motion';
+import { standardEasing, durations, springEasing } from '@/utils/motion';
 import Button from './Button';
+import dynamic from 'next/dynamic';
+import { useAutoTrade } from '@/context/AutoTradeContext';
+
+// Dynamically import the AutoTradeAnimation with prefetch for better performance
+const AutoTradeAnimation = dynamic(() => import('./AutoTradeAnimation'), {
+  ssr: false,
+  loading: () => <div className="h-40 w-full flex items-center justify-center"><div className="skeleton h-32 w-32 rounded-full"></div></div>
+});
+
 
 interface AutoTradeModalProps {
   isVisible: boolean;
@@ -28,6 +37,7 @@ export const AutoTradeModal: React.FC<AutoTradeModalProps> = ({
   const [displayedMessage, setDisplayedMessage] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingStep, setProcessingStep] = useState(0); // For cycling through processing messages
+  const { enable } = useAutoTrade();
 
   const PROCESSING_MESSAGES = ["Calibrating Vectors...", "Executing Quantum Trade...", "Confirming Network Consensus..."];
 
@@ -58,6 +68,7 @@ export const AutoTradeModal: React.FC<AutoTradeModalProps> = ({
             } else {
               setIsProcessing(true);
               // setDisplayedMessage("Executing Trade..."); // Initial processing message handled by effect below
+              // Call onProcessComplete which will handle the auto-trade logic
               onProcessComplete()
                 .catch((e) => console.error("Error during auto-trade process:", e))
                 .finally(() => setTimeout(onClose, 300)); // Slightly shorter delay for modal close
@@ -101,31 +112,15 @@ export const AutoTradeModal: React.FC<AutoTradeModalProps> = ({
           transition={{ duration: durations.fast }}
         >
           <motion.div
-            className="bg-bg-800 p-8 rounded-xl shadow-2xl w-full max-w-md text-center neo-card-glow" // Added glow
-            initial={{ scale: 0.9, opacity: 0 }}
+            className="bg-surface p-8 rounded-xl shadow-2xl w-full max-w-md text-center neo-card backdrop-blur-[24px]" // Updated styles per UI revamp
+            initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: durations.medium, ease: standardEasing }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            transition={{ duration: 0.25, ease: springEasing }} // 250ms cubic-spring per UI revamp
           >
             <div className="mb-6">
-              {/* Simple animated bars for "AI processing" feel */}
-              <div className="flex justify-center space-x-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="w-2 h-8 bg-primary rounded-full"
-                    animate={{
-                      scaleY: [1, 1.8, 1, 0.7, 1.4, 1], // More dynamic bar animation
-                      opacity: [0.6, 1, 0.6, 0.4, 0.9, 0.6],
-                    }}
-                    transition={{
-                      duration: 1.2, // Faster bar animation
-                      repeat: Infinity,
-                      delay: i * 0.1,
-                    }}
-                  />
-                ))}
-              </div>
+              {/* Replace GIF with Lottie animation */}
+              <AutoTradeAnimation className="mb-4" />
               <h2 className="text-2xl font-display font-medium text-primary mb-2">
                 Auto-Trading Engaged
               </h2>

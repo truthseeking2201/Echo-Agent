@@ -136,8 +136,7 @@ export const PortfolioChart: React.FC<PortfolioChartProps> = ({
                   r: 6, 
                   stroke: '#050507', 
                   strokeWidth: 2, 
-                  fill: '#00E5EE',
-                  boxShadow: '0 0 8px #00E5EE'
+                  fill: '#00E5EE'
                 }}
               />
             </AreaChart>

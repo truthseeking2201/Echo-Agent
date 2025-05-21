@@ -6,6 +6,7 @@ export const durations = {
   medium: 0.32, // 320ms - t-medium for card hover
   route: 0.45, // 450ms - t-route for page change
   lazy: 0.8, // 800ms - for longer animations
+  slow: 0.6, // 600ms - for drawer and complex animations
 };
 
 // Easing curves from UI revamp

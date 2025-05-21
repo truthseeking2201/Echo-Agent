@@ -6,6 +6,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { useEchoStore } from '@/store/echo';
 import { AnimatePresence } from 'framer-motion';
 import { DrawerProvider } from '@/components/LayoutShell';
+import { AutoTradeProvider } from '@/context/AutoTradeContext';
 
 // We can't use next/font because this project uses NextJS 12
 // Instead, we'll use traditional font imports in globals.css
@@ -199,19 +200,21 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ApolloProvider client={client}>
-      <DrawerProvider>
-        <AnimatePresence mode="wait">
-          {loading ? (
-            <div className="fixed inset-0 flex items-center justify-center bg-bg-900 z-50">
-              <div className="text-primary font-display text-2xl">
-                Echo<span className="text-accent">.</span>
+      <AutoTradeProvider>
+        <DrawerProvider>
+          <AnimatePresence mode="wait">
+            {loading ? (
+              <div className="fixed inset-0 flex items-center justify-center bg-bg-900 z-50">
+                <div className="text-primary font-display text-2xl">
+                  Echo<span className="text-accent">.</span>
+                </div>
               </div>
-            </div>
-          ) : (
-            <Component {...pageProps} key={router.pathname} />
-          )}
-        </AnimatePresence>
-      </DrawerProvider>
+            ) : (
+              <Component {...pageProps} key={router.pathname} />
+            )}
+          </AnimatePresence>
+        </DrawerProvider>
+      </AutoTradeProvider>
     </ApolloProvider>
   );
 }

@@ -14,8 +14,9 @@ import Toast, { ToastType } from '@/components/Toast';
 import useAutoTrade from '@/utils/useAutoTrade';
 import { AutoTradeModal } from '@/components/AutoTradeModal';
 import PurposeBanner from '@/components/PurposeBanner';
+import { useAutoTrade as useAutoTradeContext } from '@/context/AutoTradeContext';
+import AutoTradeBadge from '@/components/AutoTradeBadge';
 
-type AutoTradeEngagedStateType = 'idle' | 'processing' | 'active' | 'failed';
 
 interface SimulationToastState {
   visible: boolean;
@@ -29,11 +30,11 @@ interface SimulationToastState {
  * Implements the streamlined information architecture from the design guide
  */
 const Overview: NextPage = () => {
-  const { portfolio, trades, settings, connectWallet, wallet, setRisk, loadSignals } = useEchoStore();
-  const { toast: autoTradeToast, handleAutoTrade, closeToast: closeAutoTradeToast } = useAutoTrade();
+  const { portfolio, trades, settings, connectWallet, wallet, setRisk, loadSignals, mirror } = useEchoStore();
+  const { toast: autoTradeToast, closeToast: closeAutoTradeToast } = useAutoTrade();
+  const { enabled: autoTradeEnabled, enable: enableAutoTrade, disable: disableAutoTrade } = useAutoTradeContext();
   const [simulationToast, setSimulationToast] = useState<SimulationToastState>({ visible: false, message: '', type: 'info' });
   const [isAutoTradeModalVisible, setIsAutoTradeModalVisible] = useState(false);
-  const [autoTradeEngagedState, setAutoTradeEngagedState] = useState<AutoTradeEngagedStateType>('idle');
   const [activeTab, setActiveTab] = useState<'portfolio' | 'simulate'>('portfolio');
   const [tokenToSimulate, setTokenToSimulate] = useState('ETH');
   const [positionPct, setPositionPct] = useState(settings.maxRiskPct || 10);
@@ -116,25 +117,21 @@ const Overview: NextPage = () => {
   const SAMPLE_TOKENS = ["ETH", "BTC", "SOL", "AVAX", "MATIC", "LINK", "PEPE"];
   
   const triggerAutoTradeWithModal = async () => {
-    if (settings.isPaused || !wallet.connected || autoTradeEngagedState === 'active' || autoTradeEngagedState === 'processing') return;
-    setAutoTradeEngagedState('processing'); // Set state to processing when modal is shown
+    if (settings.isPaused || !wallet.connected || autoTradeEnabled) return;
     setIsAutoTradeModalVisible(true);
   };
 
   const deactivateAutoTrade = () => {
-    setAutoTradeEngagedState('idle');
-    // Optionally, inform the user with a toast
-    // This assumes useAutoTrade might expose a generic way to show toasts or we add another toast state here
-    // For now, just changing state. A toast can be added if `useAutoTrade` is expanded or another state var created.
-    setSimulationToast({ // Assuming we might reuse autoTradeToast state for simplicity or add a new one
-        visible: true,
-        message: "Auto-Trading has been deactivated.",
-        type: "info",
+    disableAutoTrade();
+    setSimulationToast({
+      visible: true,
+      message: "Auto-Trading has been deactivated.",
+      type: "info",
     });
   };
 
   const handleAutoTradeButtonClick = () => {
-    if (autoTradeEngagedState === 'active') {
+    if (autoTradeEnabled) {
       deactivateAutoTrade();
     } else {
       triggerAutoTradeWithModal();
@@ -143,56 +140,84 @@ const Overview: NextPage = () => {
 
   const handleModalProcessComplete = async () => {
     try {
-      const success = await handleAutoTrade(); // Execute the original auto-trade logic
-      if (success) {
-        setAutoTradeEngagedState('active');
-      } else {
-        setAutoTradeEngagedState('failed'); // Could also be 'idle' if 'failed' is too strong
+      // Check wallet connection
+      if (!wallet.connected) {
+        connectWallet();
+        setSimulationToast({
+          visible: true,
+          message: 'Wallet not connected. Please connect your wallet.',
+          type: 'info'
+        });
+        return;
       }
-    } catch (e) {
-      setAutoTradeEngagedState('failed');
+      
+      // If no signals yet, show a toast
+      if (useEchoStore.getState().signals.length === 0) {
+        setSimulationToast({
+          visible: true,
+          message: 'No signals available to auto-trade. Waiting for new signals...',
+          type: 'info'
+        });
+        return;
+      }
+      
+      // Take the first signal and mirror it
+      const signal = useEchoStore.getState().signals[0];
+      
+      setSimulationToast({
+        visible: true,
+        message: `Submitting trade for $${signal.token}...`,
+        type: 'info'
+      });
+      
+      await mirror(signal.id);
+      
+      // Enable auto-trade via context
+      await enableAutoTrade();
+      
+      // Show success toast
+      setSimulationToast({
+        visible: true,
+        message: `Signal locked for ${signal.token}, auto-trading enabled 🚀`,
+        type: 'success'
+      });
+    } catch (error) {
+      console.error('Error enabling auto-trade:', error);
+      
+      setSimulationToast({
+        visible: true,
+        message: `Auto-Trade Error: ${error instanceof Error ? error.message : 'Unknown error occurred'}`,
+        type: 'error'
+      });
     }
-    // Modal will close itself. The toast from useAutoTrade will provide specific feedback.
+    // Modal will close itself
   };
 
   const closeAutoTradeModal = () => {
     setIsAutoTradeModalVisible(false);
-    // Only reset to idle if it was closed while still in the initial processing stage
-    // and not yet completed to active/failed by onProcessComplete.
-    if (autoTradeEngagedState === 'processing') {
-        setAutoTradeEngagedState('idle');
-    }
-    // Do not clear autoTradeToast here, as it might be showing success/failure from handleAutoTrade
   };
 
   const getAutoTradeButtonContent = () => {
     const textClasses = "mr-2";
-    let text = "";
-    if (!wallet.connected) return <span className={textClasses}>Connect Wallet</span>; // Ensure JSX consistency
+    if (!wallet.connected) return <span className={textClasses}>Connect Wallet</span>;
     if (settings.isPaused) return <span className={textClasses}>Trading Paused</span>;
-    switch (autoTradeEngagedState) {
-      case 'processing':
-        text = 'AI Processing...';
-        break;
-      case 'active':
-        return (
-          <span className="flex items-center justify-center">
-            <motion.div 
-              className="w-2 h-2 bg-success rounded-full mr-2"
-              animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <span className={textClasses}>Auto-Trading Active (Click to Disable)</span>
-          </span>
-        );
-      case 'failed':
-        text = 'Retry Auto-Trade';
-        break;
-      case 'idle':
-      default:
-        text = 'Enable Auto-Trade';
+    
+    if (isAutoTradeModalVisible) {
+      return <span className={textClasses}>AI Processing...</span>;
+    } else if (autoTradeEnabled) {
+      return (
+        <span className="flex items-center justify-center">
+          <motion.div 
+            className="w-2 h-2 bg-success rounded-full mr-2"
+            animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <span className={textClasses}>Auto-Trading Active (Click to Disable)</span>
+        </span>
+      );
+    } else {
+      return <span className={textClasses}>Enable Auto-Trade</span>;
     }
-    return <span className={textClasses}>{text}</span>;
   };
 
   return (
@@ -251,9 +276,9 @@ const Overview: NextPage = () => {
             <Button
               variant="gradient"
               onClick={handleAutoTradeButtonClick}
-              disabled={settings.isPaused || !wallet.connected || autoTradeEngagedState === 'processing'}
+              disabled={settings.isPaused || !wallet.connected || isAutoTradeModalVisible}
               withSound
-              className={autoTradeEngagedState === 'active' ? '!bg-success/20 border-success/50 hover:!bg-success/30' : ''}
+              className={autoTradeEnabled ? '!bg-success/20 border-success/50 hover:!bg-success/30' : ''}
             >
               {getAutoTradeButtonContent()}
             </Button>
@@ -356,9 +381,12 @@ const Overview: NextPage = () => {
               <div className="neo-card p-4">
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-lg font-semibold text-white">Recent Trades</h2>
-                  <div className="flex items-center">
-                    <div className="pulsing-dot pulsing-dot-success"></div>
-                    <span className="text-sm text-white/70">Live updating</span>
+                  <div className="flex items-center space-x-3">
+                    <AutoTradeBadge />
+                    <div className="flex items-center">
+                      <div className="pulsing-dot pulsing-dot-success"></div>
+                      <span className="text-sm text-white/70">Live updating</span>
+                    </div>
                   </div>
                 </div>
                 

@@ -1,32 +1,27 @@
-import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import type { NextPage } from 'next';
-import { useEchoStore } from '@/store/echo';
-import Layout from '@/components/Layout';
-import TradesTable from '@/components/TradesTable';
+import { useEffect } from 'react';
 
-const Logs: NextPage = () => {
-  const { trades } = useEchoStore();
-  const [selectedTradeId, setSelectedTradeId] = useState<string | undefined>(
-    trades.length > 0 ? trades[0].id : undefined
-  );
+/**
+ * Logs page that redirects to the new signals page
+ * Proper redirect handling to prevent ENOENT errors during server-side rendering
+ */
+const LogsPage: NextPage = () => {
+  const router = useRouter();
   
+  useEffect(() => {
+    // Redirect to the signals page
+    router.replace('/signals');
+  }, [router]);
+  
+  // Return a minimal loading state while redirecting
   return (
-    <Layout title="Trade Logs">
-      <div className="mb-4 flex justify-between items-center">
-        <h2 className="text-lg font-medium">Trading History</h2>
-        
-        <div className="text-sm text-gray-400">
-          {trades.length} trades total
-        </div>
+    <div className="min-h-screen bg-bg-900 flex items-center justify-center">
+      <div className="text-primary font-display text-2xl animate-pulse">
+        Echo<span className="text-accent">.</span>
       </div>
-      
-      <TradesTable 
-        trades={trades}
-        onSelectTrade={setSelectedTradeId}
-        selectedId={selectedTradeId}
-      />
-    </Layout>
+    </div>
   );
 };
 
-export default Logs;
+export default LogsPage;
