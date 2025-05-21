@@ -7,7 +7,7 @@
     "build": "NODE_ENV=mock next build",
     "start": "next start -p 3000",
     "lint": "next lint",
-    "mock:gen": "ts-node mocks/generators/index.ts",
+    "mock:gen": "ts-node --transpile-only --compiler-options '{\"module\":\"commonjs\"}' mocks/generators/index.ts",
     "mock:serve": "NODE_ENV=mock next dev",
     "mock:graphql": "ts-node pages/api/mock/graphql.ts",
     "test": "jest --watch",
